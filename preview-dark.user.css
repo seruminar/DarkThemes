@@ -1,0 +1,529 @@
+/* ==UserStyle==
+@name           Preview Dark Theme
+@namespace      titanar/DarkThemes
+@updateURL   	https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
+@version        1.0.0
+@description    A dark theme for Preview.
+@author         Yuriy Sountsov
+
+==/UserStyle== */
+@-moz-document url-prefix("http://preview:") {
+
+	html {
+		background:#1a1a1a;
+	}
+
+	body {
+		background:#1a1a1a;
+		color: #c5c8c6;
+		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	}
+
+	h1 {
+		color: #1a1a1a;
+	}
+
+	pre {
+		font-size: 10pt;
+	}
+
+		pre a:focus {
+			color: inherit;
+			background-color: #00497d;
+		}
+
+		pre b {
+			font-weight: normal;
+			color: #569cd6;
+		}
+
+	a:link {
+		color: inherit;
+	}
+
+	a:visited {
+		color: inherit;
+	}
+
+	a:hover {
+		color: inherit;
+	}
+
+	a:active {
+		color: inherit;
+	}
+
+	table.ex {
+		border-color: #484848;
+	}
+
+	thead td.ex {
+		background-color: #484848;
+		border: none;
+	}
+
+	tr td.ex {
+		border-color: #484848;
+	}
+
+	.note {
+		background:#000;
+		border:none;
+	}
+
+	.resultGroupHeader {
+		background-color: #3a3a3a;
+		background-image: url('content/icons/minus.png');
+	}
+
+		.resultGroupHeader:hover {
+			background-color: #646464;
+		}
+
+	.rA {
+		background-color: #3a3a3a;
+		background-image: url('content/icons/minus.png');
+	}
+
+		.rA:hover {
+			background-color: #646464;
+		}
+
+	.resultGroupProjectPath {
+		color: silver;
+	}
+
+		.rL:hover, .referenceLine:hover {
+			background-color: #646464;
+		}
+
+	a b {
+		color: #2b91af;
+	}
+
+	a i {
+		background-color: #00497d;
+	}
+
+	.l {
+		margin-right: 12px;
+	}
+
+	.rO, .referenceOccurrence {
+		background-color: #00497d;
+	}
+
+	.rN, .resultGroupFileName {
+		background-color: #2f2f2f;
+		color: #c5c8c6;
+	}
+
+	.resultItem {
+		border-left-color: transparent;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+	}
+
+		.resultItem:hover {
+			background-color: #646464 !important;
+		}
+
+	.projectExplorerBody, .namespaceExplorerBody, .solutionExplorerBody {
+		cursor: default;
+		/*font-size: 12px;*/
+	}
+
+	.reference {
+		background-image: url('content/icons/192.png');
+	}
+
+	.referenceDisabled {
+		background-image: url('content/icons/192.png');
+		color: lightgray;
+	}
+
+		.typeDeclarationNode:focus, .tDN:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.projectCS {
+		background-image: url('content/icons/196.png');
+	}
+
+	.projectVB {
+		background-image: url('content/icons/195.png');
+	}
+
+	.cs {
+		background-image: url('content/icons/csharp.png');
+	}
+
+		.cs:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.vb {
+		background-image: url('content/icons/vb.png');
+	}
+
+		.vb:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.csproj {
+		background-image: url('content/icons/196.png');
+	}
+
+		.csproj:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.vbproj {
+		background-image: url('content/icons/195.png');
+	}
+
+		.vbproj:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.xaml {
+		background-image: url('content/icons/xaml.png');
+	}
+
+		.xaml:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.ts {
+		background-image: url('content/icons/typescript.png');
+	}
+
+		.ts:focus {
+			background-color: #3399ff;
+			color: #1a1a1a;
+		}
+
+	.selectedFilename {
+		background-color: #3399ff;
+		color: #1a1a1a;
+	}
+
+		.selectedFilename:link, .selectedFilename:visited, .selectedFilename:hover, .selectedFilename:active {
+			color: #1a1a1a;
+		}
+
+	.currentResult {
+		border-left-color: #484848;
+		border-top-color: #484848;
+		border-bottom-color: #484848;
+		background-color: #444;
+	}
+
+		.currentResult:hover {
+			background-color: #646464 !important;
+		}
+
+	.resultKind {
+		display: inline;
+		color: lightblue;
+	}
+
+	.resultDescription {
+		color: silver;
+	}
+
+	.rH {
+		background-color: #68217A;
+		color: #c5c8c6;
+	}
+
+	.cz {
+		margin-bottom: 66px;
+	}
+
+	.tb {
+		border: 0;
+	}
+
+	#ln {
+		color: #2b91af;
+	}
+
+	.dH {
+		background-color: #1d1d1d;
+		border-top: #000 solid;
+		color: #c5c8c6;
+		opacity: 1;
+	}
+
+	.headerBody {
+		background-color: #68217A;
+	}
+
+	#search-box {
+		border-color: #484848;
+		background: #5a5a5a;
+		color: #e0e0e0;
+	}
+
+	#logoText {
+		color: #c5c8c6;
+	}
+
+	#currentVersion {
+		color: #e0e0e0;
+	}
+
+	#downloadButton {
+		background-color: #68217A;
+		color: #1a1a1a;
+	}
+
+	#feedbackButtonLink {
+		color: #c5c8c6;
+	}
+
+	#downloadButtonLink {
+		color: #c5c8c6;
+	}
+
+	#licenseButtonLink {
+		color: #c5c8c6;
+	}
+
+	#helpButtonLink {
+		color: #c5c8c6;
+	}
+
+	.result {
+		margin: 16px;
+		padding: 4px;
+		background-color: #3a3a3a;
+	}
+
+	.r, .rd {
+		cursor: pointer;
+	}
+
+	.r {
+		border-width: 1px;
+		border-color: #3a3a3a;
+		border-style: solid;
+	}
+
+	.k, a.k {
+		color: #569cd6;
+	}
+
+	.t, a.t,
+	.l, .lineNumber {
+		color: #4ec9b0;
+	}
+
+	.c {
+		color: #57a64a;
+	}
+
+	.x, .e {
+		color: #808080;
+	}
+
+	.s {
+		color: #d69d85;
+	}
+
+	.xd {
+		color: #569cd6;
+	}
+
+	.xn {
+		color: #A31515;
+	}
+
+	.xan {
+		color: red;
+	}
+
+	.xav {
+		color: #569cd6;
+	}
+
+	.xer {
+		color: red;
+	}
+
+	.xcs {
+		color: #808080;
+	}
+
+	.xpi {
+		color: #808080;
+	}
+
+	.xld {
+		color: #6464B9;
+	}
+
+	.xln {
+		color: #844646;
+	}
+
+	.xlan {
+		color: #B96464;
+	}
+
+	.xlav {
+		color: #6464B9;
+	}
+
+	.xlaq {
+		color: #555555;
+	}
+
+	.xler {
+		color: #B96464;
+	}
+
+	.xlcs {
+		color: #C0C0C0;
+	}
+
+	.xlpi {
+		color: #C0C0C0;
+	}
+
+	.xlee {
+		color: #B96464;
+		background-color: #FFFEBF;
+	}
+
+	a.s, a.s:hover {
+		color: #a31515;
+	}
+
+	p a:link, p a:hover, p a:focus, p a:active,
+	ul a:link, ul a:hover, ul a:focus, ul a:active,
+	ol a:link, ol a:hover, ol a:focus, ol a:active,
+	.blueLink:hover, .blueLink:focus, .blueLink:active {
+		color:#0366d6 !important;
+		font-weight: 600!important; 
+		text-decoration:underline !important;
+	}
+
+	p a, 
+	ul a, 
+	ol a, 
+	.blueLink, .blueLink:link {
+		color:#0366d6 !important;
+		font-weight: 600!important; 
+		text-decoration:none;
+	}
+
+	.partialTypeLink {
+		color: #569cd6;
+	}
+
+		.partialTypeLink:hover {
+			background-color: #eeeeee;
+		}
+
+	.documentOutlineButton {
+		background-color: #484848;
+		opacity: 0.9;
+	}
+
+		.documentOutlineButton:hover {
+			border-color: #eeccc0;
+			background-color: #646464;
+		}
+
+	.projectExplorerButton {
+		border-color: transparent;
+		background-color: #484848;
+	}
+
+		.projectExplorerButton:hover {
+			border-color: #90e6d4;
+			background-color: #646464;
+		}
+
+	.namespaceExplorerButton {
+		border-color: transparent;
+		background-color: #484848;
+	}
+
+		.namespaceExplorerButton:hover {
+			border-color: #e0e0e0;
+			background-color: #646464;
+		}
+
+	.documentOutlineDiv:hover {
+		background-color: #f6f6f6;
+	}
+
+	.tabChannel {
+		background-color: #68217A;
+	}
+
+	.activeTab {
+		background-color: #1a1a1a;
+	}
+
+	.inactiveTab, .inactiveTab:link, .inactiveTab:visited {
+		background-color: #68217A;
+		color: #c5c8c6;
+	}
+
+		.inactiveTab:hover, .inactiveTab:active {
+			color: #f6f6f6;
+		}
+
+		#sourcesList li {
+			background-color: steelblue;
+			color: #1a1a1a;
+		}
+
+		.externalIndexLinks li {
+			background-color: purple;
+			color: #1a1a1a;
+		}
+
+			.externalIndexLinks li a {
+				color: #1a1a1a;
+			}
+
+		.msbuildlink:hover {
+			background-color: whitesmoke;
+		}
+
+	.projectInfo {
+		color: lightgray;
+	}
+
+	frameset {
+		border: none;
+	}
+
+  /* scroll bar */
+  ::-webkit-scrollbar {
+    max-width: 10px !important;
+    max-height: 10px !important;
+    background: #1d1d1d !important;
+  }
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+    background: #1d1d1d !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(175, 175, 175, .5) !important;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(65, 131, 196, .8) !important;
+  }
+
+}

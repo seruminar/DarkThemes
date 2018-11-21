@@ -1,0 +1,744 @@
+/* ==UserStyle==
+@name           Intercom Dark Theme
+@namespace      titanar/DarkThemes
+@updateURL   	https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
+@version        1.0.0
+@description    A dark theme for Intercom.
+@author         Yuriy Sountsov
+
+@var color background-color "Background" #2d2d2d
+@var color conversation-background-color "Conversation Background" #1a1a1a
+@var color highlight-color "Highlight" #689bff
+
+@var color accent-color "Accent" #3C414C
+@var color selected-accent-color "Selected Accent" #6264a7
+
+@var color text-color "Text" #EBEBEB
+@var color link-color "Text Link" #b8d9ff
+@var color faded-text-color "Text Faded" #b1b1b1
+
+@var color reply-color "Reply" #3a3b55
+
+@var color note-background-color "Note" #3c6b77
+@var color note-accent-color "Note Accent" #8ee3ee
+@var color note-accent-text-color "Note Accent Text" #2d2c2c
+
+@var text plan-contrast "Plan Contrast" 25
+
+@var text trial-hue "Trial Hue" 5
+@var text trial-saturation "Trial Saturation" 80
+
+@var text starter-hue "Starter Hue" 90
+@var text starter-saturation "Starter Saturation" 50
+
+@var text professional-hue "Professional Hue" 0
+@var text professional-saturation "Professional Saturation" 0
+
+@var text business-hue "Business Hue" 30
+@var text business-saturation "Business Saturation" 55
+
+@var text partner-hue "Partner Hue" 190
+@var text partner-saturation "Partner Saturation" 25
+
+@var text enterprise-hue "Enterprise Hue" 49
+@var text enterprise-saturation "Enterprise Saturation" 95
+
+@var text kentico-hue "Kentico Hue" 205
+@var text kentico-saturation "Kentico Saturation" 100
+
+==/UserStyle== */
+@-moz-document url-prefix("https://app.intercom.io/a/apps/e42kus8l") {
+
+	body {
+		color: var(--text-color);
+		background-color: var(--conversation-background-color);
+	}
+	
+	.conversation__inbox__outlet {
+		background-color: var(--background-color);
+	}
+	.submenu {
+		background-color: var(--background-color);
+	}
+
+	.submenu__sections__section__mask {
+		display: none !important;
+	}
+
+	.left-nav {
+		background: var(--accent-color);
+	}
+
+	.left-nav__link.o__selected,
+	.left-nav__link.o__selected .left-nav__icon__purchasable:after,
+	.left-nav__link.o__selected .left-nav__icon__purchasable:before {
+		background-color: var(--selected-accent-color);
+	}
+
+
+	.conversation__inbox__current-conversation {
+		background: var(--conversation-background-color);
+	}
+
+	.conversation__outlet__inner__background {
+		opacity: 0.2;
+	}
+
+	.attribute__completion {
+		background-color: var(--accent-color);
+		color: var(--background-color);
+	}
+
+	.profile__completion-indicator {
+		background-color: var(--accent-color);
+	}
+
+	.conversation__inbox__list {
+		background-color: var(--background-color);
+	}
+
+	.conversation__list__item {
+		background: var(--background-color);
+		border-bottom: 1px solid var(--accent-color);
+	}
+
+	.conversation__list__item.o__selected,
+	.conversation__list__item.o__selected:hover,
+	.conversation__list__item:hover {
+		background-color: var(--accent-color);
+	}
+
+	.conversation__list__item.o__active,
+	.conversation__list__item.o__active:hover {
+		background: var(--accent-color);
+	}
+
+	.conversation__link,
+	.conversation__link__container,
+	.conversation__messenger-card:not(.messenger-preview__home__card),
+	.conversation__text .intercom-interblocks-link,
+	.intercom-interblocks .intercom-interblocks-messenger-card {
+		background-color: var(--reply-color);
+		border: 1px solid var(--reply-color);
+	}
+
+	.conversation__link__container .intercom-interblocks-link {
+		border-bottom: 1px solid var(--faded-text-color);
+	}
+
+	.lock__overlay {
+		background: var(--accent-color);
+	}
+
+	.inbox__card__header {
+		background-color: var(--background-color);
+	}
+
+	.btn__footer,
+	.card,
+	.tbl tbody {
+		background-color: var(--reply-color);
+	}
+
+	.inbox__main-container__wrapper {
+		background: var(--background-color);
+	}
+
+	.main__content-outlet {
+		background: var(--background-color);
+	}
+
+	.conversation__inbox__list-filter {
+		background: var(--background-color);
+	}
+
+	.conversation__inbox__current-context {
+		background: var(--background-color);
+	}
+
+	.dropdown,
+	.overlay {
+		background-color: var(--accent-color);
+	}
+
+	.f__custom-select__box.o__subtle:hover,
+	.f__custom-select__box:hover {
+		background-color: var(--accent-color);
+		border-color: var(--background-color);
+		color: var(--text-color);
+	}
+
+	.f__custom-select__box.o__opened,
+	.f__custom-select__box.o__subtle.o__opened,
+	.f__custom-select__box.o__subtle:active,
+	.f__custom-select__box:active {
+		color: var(--text-color);
+		background-color: var(--accent-color);
+	}
+
+	.article-suggestion-card.o__expanded {
+		background-color: var(--selected-accent-color);
+	}
+
+	.article-suggestion-card__summary {
+		color: var(--text-color);
+	}
+
+	.article-suggestion-card__author {
+		color: var(--text-color);
+	}
+
+	.avatar {
+		color: var(--background-color);
+	}
+
+	.submenu__information-overlay {
+		background-color: var(--accent-color);
+	}
+
+	.tooltips__inbox-hovercard__title {
+		color: var(--text-color);
+	}
+
+	.conversation__stream .intercom-interblocks-link-title,
+	.conversation__text a,
+	.conversation__text.o__admin-comment a,
+	.conversation__text.o__operator-comment a {
+		color: var(--link-color);
+	}
+
+	.o__expanded .article-suggestion-card__title {
+		color: var(--link-color);
+	}
+
+	.article-suggestion-card__title {
+		color: var(--link-color);
+	}
+
+	.conversation__bubble.o__operator-comment {
+		color: var(--faded-text-color);
+	}
+
+	.conversation__list__item.o__active .conversation__card__header__company-name,
+	.conversation__list__item.o__selected .conversation__card__header__company-name,
+	.conversation__list__item:hover .conversation__card__header__company-name {
+		color: var(--faded-text-color);
+	}
+
+	.conversation__list__item.o__active .conversation__list__item__summary,
+	.conversation__list__item.o__active .conversation__list__item__summary.o__new-convo-list:not(.o__unread) {
+		color: var(--faded-text-color);
+	}
+
+	.product-icon__link.o__subscribed .product-icon__symbol {
+		fill: var(--text-color) !important
+	}
+
+	.submenu__sections__section__title__link,
+	.nav-vertical__link,
+	.submenu__header__title,
+	.submenu__header__search-icon,
+	.submenu__sections__section__items__item__count {
+		color: var(--text-color);
+	}
+
+	.conversation__list__item.o__active .conversation__list__timestamp,
+	.conversation__list__item.o__active:not(.o__selected) .conversation__list__timestamp,
+	.conversation__list__item.o__selected .conversation__list__timestamp {
+		color: var(--text-color);
+	}
+
+	.conversation__list__item.o__active .conversation__list__item__summary,
+	.conversation__list__item.o__selected .conversation__list__item__summary,
+	.conversation__list__item:hover .conversation__list__item__summary {
+		color: var(--text-color);
+	}
+
+	.product-icon__link.ember-transitioning-in .product-icon__symbol,
+	.product-icon__link.o__selected.o__subscribed:not(.ember-transitioning-out) .product-icon__symbol,
+	.product-icon__link.o__selected:not(.ember-transitioning-out) .product-icon__symbol,
+	.product-icon__link.o__subscribed.ember-transitioning-in .product-icon__symbol,
+	.product-icon__link.o__subscribed:hover .product-icon__symbol {
+		fill: var(--text-color)!important;
+	}
+
+	.conversation__list__item__main-participant__name {
+		color: var(--text-color);
+	}
+
+	.t__body,
+	.t__h1,
+	.t__h2 {
+		color: var(--text-color);
+	}
+
+	.t__h3 {
+		color: var(--text-color);
+	}
+
+	.profile-sidebar-section__section-title {
+		color: var(--text-color);
+	}
+
+	.application__component {
+		color: var(--text-color);
+		background-color: var(--conversation-background-color);
+	}
+
+	.submenu__collapse-toggle__icon {
+		color: var(--text-color);
+	}
+
+	.conversation__card__title__em-link {
+		color: var(--text-color);
+	}
+
+	.inbox__conversation-controls__additional-inserters-opener,
+	.inbox__conversation-controls__inserter-opener {
+		color: var(--text-color);
+	}
+
+	.conversation__bubble.o__user-comment {
+		color: var(--text-color);
+	}
+
+	.f__custom-select__box {
+		color: var(--text-color);
+	}
+
+	.btn.o__secondary {
+		color: var(--text-color);
+	}
+
+	.color-map__early-2018-brand-refresh .embercom-composer-placeholder {
+		color: var(--text-color);
+	}
+
+	.conversation__list__item.o__active .conversation__list__item__main-participant__name,
+	.conversation__list__item.o__selected .conversation__list__item__main-participant__name,
+	.conversation__list__item:hover .conversation__list__item__main-participant__name {
+		color: var(--text-color);
+	}
+
+	.tabs__tab.o__in-pane-selector.o__selected:hover,
+	.tabs__tab.o__selected:hover {
+		color: var(--text-color);
+		border-bottom-color: var(--text-color);
+	}
+
+	.tabs__tab.o__in-pane-selector:hover,
+	.tabs__tab:hover {
+		opacity: 1;
+		color: var(--text-color);
+	}
+
+	.tabs__tab.o__in-pane-selector.o__selected {
+		color: var(--faded-text-color);
+	}
+
+	.tabs__tab.o__selected {
+		border-bottom-color: var(--faded-text-color);
+	}
+
+	.tabs__tab.o__in-pane-selector {
+		color: var(--faded-text-color);
+	}
+
+	.conversation__bubble.o__admin-note {
+		border-color: var(--note-background-color);
+		background-color: var(--note-background-color);
+	}
+
+	.inbox__conversation-controls__pane-selector.o__note-selected {
+		background-color: var(--note-background-color);
+	}
+
+	.inbox__conversation-controls__internal-part {
+		background-color: var(--note-background-color);
+	}
+
+	.profile__note-textarea {
+		background-color: var(--note-background-color);
+	}
+
+	.profile__note-textarea.o__focused {
+		background-color: var(--note-background-color);
+	}
+
+	.conversation__list__item__note-summary-bar {
+		background-color: var(--note-background-color);
+	}
+
+	.conversation__text .entity_mention {
+		background-color: var(--note-accent-color);
+		color: var(--note-accent-text-color);
+	}
+
+	.conversation__bubble.o__bot-comment,
+	.conversation__bubble.o__user-comment {
+		border-color: var(--note-accent-text-color);
+		background-color: var(--note-accent-text-color);
+	}
+
+	.conversation__bubble.o__user-comment.o__is-typing-on {
+		border-color: var(--note-accent-text-color);
+		background-color: var(--note-accent-text-color);
+	}
+
+	.conversation__bubble.o__admin-comment,
+	.conversation__bubble.o__admin-comment.o__is-typing-on {
+		border-color: var(--reply-color);
+		background-color: var(--reply-color);
+	}
+	
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip, .color-map__early-2018-brand-refresh .packaging__tooltip {
+    	background-color: var(--accent-color);
+    	color: var(--text-color);
+	}
+	
+	.conversation__list__badge.o__unread {
+		background-color: var(--highlight-color);
+	}
+	
+	.conversation__list__item.o__active .conversation__card__header {
+		padding-left: 18px;
+		border-left: 2px solid var(--highlight-color);
+	}
+	
+	.nav-vertical__link.ember-transitioning-in, .nav-vertical__link.ember-transitioning-in:hover, .nav-vertical__link.o__selected:not(.ember-transitioning-out), .nav-vertical__link.o__selected:not(.ember-transitioning-out):hover, .nav-vertical__link:hover, .nav-vertical__settings-icon:hover {
+		color: var(--highlight-color);
+	}
+	
+	.left-nav__link.o__logo {
+		fill: var(--highlight-color);
+	}
+	
+	.btn.o__primary, .btn.o__primary:focus {
+		background-color: #286efa;
+	}
+	
+	.btn.o__primary.o__forced-active, .btn.o__primary:active, .btn.o__primary:hover {
+		background-color: var(--highlight-color);
+	}
+	
+	.submenu__collapse-toggle__icon:hover {
+		color: var(--highlight-color);
+		opacity: 1;
+	}
+	
+	.article-suggestion-card:hover .article-suggestion-card__button:hover {
+    	background-color: var(--highlight-color);
+	}
+	
+	.btn.o__secondary:hover {
+		color: var(--text-color);
+		border: 1px solid var(--selected-accent-color);
+		background-color: var(--selected-accent-color);
+	}
+
+	.conversation__mini-card:hover {
+		border: 1px solid var(--highlight-color);
+	}
+	
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__edited-by, .color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__uneditable, .color-map__early-2018-brand-refresh .overlay__standard-tooltip a {
+		color: var(--text-color);
+	}
+	
+	.ds-new__dropdown {
+		background-color: var(--accent-color);
+	}
+	
+	.t__light-text {
+		color: var(--faded-text-color);
+	}
+	
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .f__custom-select__check, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .t__light-text, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .tag_or_segment_name, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .f__custom-select__check, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .t__light-text, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .tag_or_segment_name {
+		color: var(--text-color) !important;
+	}
+	
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .ds-new__event__option:focus, .color-map__early-2018-brand-refresh .ds-new__event__option:hover:focus, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover {
+		background-color: var(--selected-accent-color);
+	}
+	
+	.f__custom-select__box.o__opened, .f__custom-select__box:active {
+		border-color: var(--accent-color);
+	}
+	
+	.f__custom-select__box.o__opened:hover {
+		color: var(--text-color);
+		background-color: var(--selected-accent-color);
+		border-color: var(--selected-accent-color);
+	}
+	
+	.pill {
+		background-color: var(--accent-color);
+		color: var(--faded-text-color);
+	}
+	
+	.t__solo-link:active, .t__solo-link:hover, .t__solo-link__outer:active .t__solo-link__inner, .t__solo-link__outer:hover .t__solo-link__inner {
+		color: var(--text-color);
+	}
+	
+	.ds-new__dropdown__block__item {
+		color: var(--text-color);
+	}
+	
+	.btn.o__destructive, .btn.o__destructive:focus, .btn.o__destructive:hover, .btn.o__secondary, .btn.o__secondary-destructive, .btn.o__secondary-destructive:focus, .btn.o__secondary-destructive:hover, .btn.o__secondary-live, .btn.o__secondary:focus, .btn.o__secondary:hover {
+		background-color: var(--accent-color);
+	}
+	
+	/* required for the above rule to not overwrite the existing version of this */
+	.btn.o__subtle {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	
+	.btn.o__secondary.o__forced-active, .btn.o__secondary:active {
+		color: var(--text-color);
+		background-color: var(--selected-accent-color);
+	}
+	
+	.submenu__sections__section__items__item {
+		color: var(--text-color);
+	}
+	
+	.submenu__sections__section__items__item.ember-transitioning-in, .submenu__sections__section__items__item.ember-transitioning-in .submenu__sections__section__items__item__count, .submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out), .submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out) .submenu__sections__section__items__item__count, .submenu__sections__section__items__item:hover, .submenu__sections__section__items__item:hover .submenu__sections__section__items__item__count {
+		color: var(--highlight-color);
+	}
+	
+	.background-select__background-selector.o__background-gray {
+		background-color: var(--conversation-background-color);
+	}
+	
+	.background-select__spacer {
+		background-color: var(--conversation-background-color);
+		border: 1px solid var(--conversation-background-color);
+	}
+	
+	.settings__conversation-sidebar {
+		color: var(--text-color);
+		fill: var(--text-color) !important;
+	}
+	
+	.visibility__row {
+		background-color: var(--accent-color);
+		color: var(--text-color);
+		border-bottom: 1px solid var(--text-color);
+	}
+	
+	.visibility__row__name {
+		color: var(--text-color);
+	}
+	
+	.visibility__row__description {
+		color: var(--faded-text-color);
+	}
+	
+	.btn__tertiary {
+		color: var(--highlight-color);
+	}
+	
+	.m__settings__notifications__header {
+		background-color: var(--accent-color);
+		border-bottom: 1px solid var(--text-color);
+	}
+	
+	.users-and-companies__predicates-editor {
+		background-color: var(--background-color);
+	}
+	
+	.user-list__header, .user-list__header.o__without-select-all.o__without-selected-users {
+		background-color: var(--background-color);
+	}
+	
+	.filter-block__details, .filter-block__details__specific-error, .filter-block__name {
+		color: var(--text-color);
+	}
+	
+	.filter-block.o__clickable:hover, .filter-block.o__open, .filter-block.o__open:hover {
+		background-color: var(--selected-accent-color);
+	}
+	
+	.filter-block.o__clickable:hover .filter-block__details, .filter-block.o__clickable:hover .filter-block__name, .filter-block.o__open .filter-block__details, .filter-block.o__open .filter-block__name, .filter-block.o__open:hover .filter-block__details, .filter-block.o__open:hover .filter-block__name {
+		color: var(--text-color);
+	}
+	
+	.f__custom-select__box {
+		background-color: var(--accent-color);
+		color: var(--text-color);
+	}
+	
+	.btn.o__toggle.o__selected {
+		background-color: var(--selected-accent-color);
+	}
+	
+	.btn.o__toggle.o__selected, .btn.o__toggle:hover {
+		box-shadow: none;
+		color: var(--text-color);
+		border: 1px solid var(--selected-accent-color);
+		z-index: 1;
+		position: relative;
+	}
+	
+	.btn.o__toggle {
+		background-color: var(--accent-color);
+		color: var(--text-color);
+	}
+	
+	.btn.o__toggle.o__selected:hover {
+		color: var(--highlight-color);
+		border: 1px solid var(--selected-accent-color);
+	}
+	
+	.loading__main-application {
+		background-color: var(--background-color)!important;
+	}
+	
+	.ds-new__dropdown__block__item.o__selected {
+		color: var(--text-color);
+		background-color: var(--selected-accent-color);
+	}
+	
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .f__custom-select__check, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .inbox__inbox-picker__link, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .submenu__sections__section__items__item__count, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .f__custom-select__check, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .inbox__inbox-picker__link, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .submenu__sections__section__items__item__count {
+		color: var(--text-color);
+	}
+	
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .interface-icon path, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .interface-icon path {
+		fill: var(--text-color)!important;
+	}
+	
+	.ds-new__dropdown__block__item:focus {
+		background-color: var(--highlight-color);
+		color: var(--text-color);
+		outline: 0;
+	}
+	
+	.interface-icon circle, .interface-icon ellipse, .interface-icon line, .interface-icon path, .interface-icon polygon, .interface-icon polyline, .interface-icon rect {
+		fill: var(--highlight-color)!important;
+	}
+	
+	.modal {
+		background-color: var(--accent-color);
+	}
+	
+	.tagger__holder {
+		background-color: var(--accent-color);
+	}
+	
+	input {
+		background-color:  var(--accent-color);
+		color: var(--text-color);
+	}
+	
+	.nav-vertical__search__input {
+		background-color:  var(--accent-color);
+		color: var(--text-color);
+	}
+	
+	.dropdown__list-item.o__hoverable:hover, .dropdown__list-item.o__selected, .overlay__list-item.o__hoverable:hover {
+		background-color: var(--highlight-color);
+		color: var(--text-color);
+	}
+	
+	.nav-vertical__search {
+		background-color:  var(--accent-color);
+	}
+	
+	.nav-vertical__search__backing {
+		background-color:  var(--accent-color);
+	}
+
+	/* scroll bar */
+	::-webkit-scrollbar {
+		max-width: 10px !important;
+		max-height: 10px !important;
+		background: var(--conversation-background-color) !important;
+	}
+	::-webkit-scrollbar-track,
+	::-webkit-scrollbar-corner {
+		background: var(--conversation-background-color) !important;
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--accent-color) !important;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--selected-accent-color) !important;
+	}
+
+
+	/* Custom Extension styles */
+	.pluginBarDisplayed.off {
+		background-color: #bb4040 !important;
+	}
+
+	.pluginBarDisplayed.on {
+		background-color: #6a8649 !important;
+	}
+
+	div[data-key="custom_data.subscription-plan"],
+	div[data-key="custom_data.paid_customer"] {
+		background-color: var(--note-background-color);
+	}
+
+	div[data-key="custom_data.subscription-plan"] .t__label,
+	div[data-key="custom_data.paid_customer"] .t__label {
+		background-color: var(--note-accent-color);
+		color: var(--note-accent-text-color);
+	}
+
+	.trialPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)),
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.starterPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)),
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.professionalPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)),
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.businessPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)),
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.partnerPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)),
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.enterprisePlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)),
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+
+	.kenticoPlan {
+		background: repeating-linear-gradient(45deg, 
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)),
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 10px,
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+}
