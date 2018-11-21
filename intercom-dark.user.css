@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.0.0
+@version        1.0.1
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -617,6 +617,11 @@
 		fill: var(--highlight-color)!important;
 	}
 	
+	/* Required fix for icon highlight being the same as the background highlight*/
+	a:hover>.interface-icon circle,a:hover>.interface-icon ellipse,a:hover>.interface-icon line,a:hover>.interface-icon path,a:hover>.interface-icon polygon,a:hover>.interface-icon polyline,a:hover>.interface-icon rect,span:hover>.interface-icon circle,span:hover>.interface-icon ellipse,span:hover>.interface-icon line,span:hover>.interface-icon path,span:hover>.interface-icon polygon,span:hover>.interface-icon polyline,span:hover>.interface-icon rect {
+		fill: var(--text-color)!important;
+	}
+	
 	.modal {
 		background-color: var(--accent-color);
 	}
@@ -646,6 +651,18 @@
 	
 	.nav-vertical__search__backing {
 		background-color:  var(--accent-color);
+	}
+	
+	.inbox__send-and-change-state__primary-action {
+		color:  var(--text-color);
+	}
+	
+	.inbox__send-and-change-state__primary-action:hover {
+		background-color:  var(--highlight-color);
+	}
+	
+	.inbox__send-and-change-state__opener:hover {
+		background-color:  var(--highlight-color);
 	}
 
 	/* scroll bar */
