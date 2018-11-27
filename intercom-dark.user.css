@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.0.1
+@version        1.1.0
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -16,6 +16,8 @@
 @var color text-color "Text" #EBEBEB
 @var color link-color "Text Link" #b8d9ff
 @var color faded-text-color "Text Faded" #b1b1b1
+
+@var color message-color "Message" #2d2c2c
 
 @var color reply-color "Reply" #3a3b55
 
@@ -189,7 +191,7 @@
 	}
 
 	.avatar {
-		color: var(--background-color);
+		color: var(--text-color);
 	}
 
 	.submenu__information-overlay {
@@ -376,13 +378,13 @@
 
 	.conversation__bubble.o__bot-comment,
 	.conversation__bubble.o__user-comment {
-		border-color: var(--note-accent-text-color);
-		background-color: var(--note-accent-text-color);
+		border-color: var(--message-color);
+		background-color: var(--message-color);
 	}
 
 	.conversation__bubble.o__user-comment.o__is-typing-on {
-		border-color: var(--note-accent-text-color);
-		background-color: var(--note-accent-text-color);
+		border-color: var(--message-color);
+		background-color: var(--message-color);
 	}
 
 	.conversation__bubble.o__admin-comment,
@@ -613,7 +615,7 @@
 		outline: 0;
 	}
 	
-	.interface-icon circle, .interface-icon ellipse, .interface-icon line, .interface-icon path, .interface-icon polygon, .interface-icon polyline, .interface-icon rect {
+	.interface-icon circle, .interface-icon ellipse, .interface-icon line, .interface-icon polygon, .interface-icon polyline, .interface-icon rect {
 		fill: var(--highlight-color)!important;
 	}
 	
@@ -663,6 +665,22 @@
 	
 	.inbox__send-and-change-state__opener:hover {
 		background-color:  var(--highlight-color);
+	}
+	
+	.user__hovercard {
+		background: var(--accent-color);
+	}
+	
+	.attribute__completion.o__complete {
+		background-color: var(--selected-accent-color);
+	}
+	
+	.profile__completion-indicator-inner {
+		background-color: var(--selected-accent-color);
+	}
+	
+	.c__active {
+		color: var(--highlight-color);
 	}
 
 	/* scroll bar */
