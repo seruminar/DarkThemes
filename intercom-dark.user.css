@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.1.0
+@version        1.1.1
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -180,6 +180,10 @@
 
 	.article-suggestion-card.o__expanded {
 		background-color: var(--selected-accent-color);
+	}
+	
+	.article-suggestion-card__body {
+		color: var(--text-color);
 	}
 
 	.article-suggestion-card__summary {
@@ -681,6 +685,22 @@
 	
 	.c__active {
 		color: var(--highlight-color);
+	}
+	
+	.c__darkest {
+		color: var(--text-color);
+	}
+	
+	.educate__icon.o__deemphasized {
+		stroke: var(--text-color);
+	}
+	
+	.menu__popover {
+		background: var(--accent-color);
+	}
+	
+	.menu__popover__item {
+		color: var(--text-color);
 	}
 
 	/* scroll bar */
