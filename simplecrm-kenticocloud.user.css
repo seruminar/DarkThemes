@@ -1,0 +1,134 @@
+/* ==UserStyle==
+@name           Simple CRM Kentico Cloud Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://kentico.crm4.dynamics.com/WebResources/ken_SimpleCRM") {
+    #container {
+    font-family: "Source Sans Pro", sans-serif;
+	}
+
+	#rtop {
+		background: #007dcc;
+		padding: 10;
+	}
+
+	#ltop {
+		background: #007dcc;
+	}
+
+	#right {
+		border-left: 1px solid rgb(224, 224, 224);
+	}
+
+	#left {
+		border-right: 1px solid #e0e0e0;   
+	}
+
+	#lcontent {
+		background: #eee;
+	}
+
+	#rcontent {
+		padding: 10;
+		background-color: rgb(250, 250, 250);
+	}
+
+	#rcontent .caption {
+		font-size: 12px;
+		font-weight: 400;
+		margin-bottom: 4px;
+		text-transform: uppercase;
+		color: rgb(117, 117, 117);
+		padding: 4px 0;
+	}
+
+	#changestatus, #changepriority {
+		width: 45% !important;
+		margin-right: 5% !important;
+	}
+
+	#caseAddNote, #caseAddTags {
+		color: rgb(33, 150, 243);
+		padding: 10;
+	}
+
+	#queues .queue {
+		color:rgb(227, 242, 253);
+		border: 1px solid rgba(0,0,0,0);
+		border-radius: 2px;
+		box-sizing: border-box;
+	}
+
+	#queues .active{
+		color:rgb(227, 242, 253);
+		border: 1px solid;
+	}
+
+	#queues div:hover {
+		color:rgb(255, 255, 255);
+		border: 1px solid;
+	}
+
+	#sorting {
+		margin:4;
+	}
+
+	#sorting .sort {
+		opacity: .7
+	}
+
+	button, select,#search #searchBox {
+		border:none !important;
+		border-radius: 2px;
+	}
+
+	#otherCasesList, #emailAttachmentsList, #caseAttachmentsList, #accountServicesList, #otherCasesList, #caseAttachmentsList {
+		max-height: 100px !important;
+		overflow-y: auto !important;
+		_min-height: 100px !important;
+	}
+
+	#emailAttachments, #otherCases, #caseAttachments {
+		min-height: initial !important;
+		max-height: initial !important;
+	}
+
+	#lcontent .case.sales {
+		border: none !important;
+		background: rgb(255, 202, 255);
+		color: #777;
+	}
+
+	#rcontent #caseTags #tagsAutocomplete {
+		width: 100%;
+	}
+
+	#rcontent #caseAddNoteArea {
+		width: 100%;
+	}
+
+	#rcontent #caseAddNoteForm {
+		padding: 10;
+	}
+
+	/* scroll bar */
+	::-webkit-scrollbar {
+	max-width: 10px !important;
+	max-height: 10px !important;
+		background: #eee !important;
+	}
+	::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+		background: #eee !important;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ccc !important;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #ccc !important;
+	}
+
+}
