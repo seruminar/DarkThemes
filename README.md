@@ -1,2 +1,2 @@
-# Dark Themes
-Dark themes for some commonly used web applications.
+# Stylus Themes
+Stylus themes for some commonly used web applications.
