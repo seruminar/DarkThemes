@@ -1,0 +1,453 @@
+	/* ==UserStyle==
+@name           JIRA Dark Theme
+@namespace      github.com/openstyles/stylus
+@updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/jira-dark.user.css
+@version        0.1.0
+@description    A dark theme for JIRA.
+@author         Yuriy Sountsov
+
+@var color background-color "Background" #201f1f
+@var color highlight-color "Highlight" #689bff
+
+@var color theme-color "Theme" #464775
+
+@var color menu-color "Menu" #3b3a3a
+@var color menu-hover-color "Menu hover" #4a495a
+
+@var color submenu-color "Submenu" #2d2c2c
+@var color submenu-hover-color "Submenu hover" #6264a7
+
+@var color accent-color "Accent" #3C414C
+@var color selected-accent-color "Selected Accent" #6264a7
+
+@var color text-color "Text" #EBEBEB
+@var color link-color "Text Link" #b8d9ff
+@var color text-box-color "Textbox" #2d2c2c
+
+@var color faded-text-color "Text Faded" #b1b1b1
+
+@var color code-string "Code: string" #d69d85
+@var color code-reserved "Code: reserved" #569cd6
+
+==/UserStyle== */
+@-moz-document regexp("http.*atlassian\\.net\\/(secure|browse|issues).*"), url-prefix("https://automation.codebarrel.io") {
+	
+	body {
+    	background-color: var(--background-color);
+		color: var(--text-color);
+	}
+	
+	.aui-page-header, .aui-page-panel, .aui-page-panel-nav {
+		background-color: var(--background-color);
+	}
+	
+	.aui-lozenge.jira-issue-status-lozenge-medium-gray {
+		background-color: var(--highlight-color);
+		border-color: var(--highlight-color);
+		color: var(--text-color);
+	}
+	
+	#issue-content {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 .item-details dl>dt, .adg3 .mod-content .property-list .wrap .name, .adg3 .mod-content item-details>li>dl>dt, .adg3 .rolling-content>div, .adg3 dt.ghx-detail-term {
+		color: var(--text-color);
+	}
+	
+	a {
+		color: var(--link-color);
+	}
+	
+	a:active {
+		color: var(--link-color);
+	}
+	a:hover, a:focus {
+		color: var(--link-color);
+	}
+	
+	.issue-drop-zone button {
+		color: var(--link-color);
+	}
+	
+	.aui-button.aui-button-link, .aui-button.aui-button-link:visited, .aui-button.aui-button-text, .aui-button.aui-button-text:visited {
+		color: var(--link-color);
+	}
+	
+	.aui-button.aui-button-link:hover, .aui-button.aui-button-text:hover, .aui-buttons .aui-button.aui-button-link:hover, .aui-buttons .aui-button.aui-button-text:hover {
+		color: var(--link-color);
+	}
+	
+	.issue-view>.issue-container .issue-header {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 .aui-page-header #summary-val {
+    	color: var(--text-color);
+	}
+	
+	.issue-header .issue-header-content>.command-bar {
+		background-color: var(--background-color);
+	}
+	
+	.aui-toolbar .toolbar-group .toolbar-trigger:active {
+		background-color: var(--accent-color);
+	}
+	
+	.aui-toolbar .aui-dropdown2-trigger.toolbar-trigger.active, .aui-toolbar .toolbar-splitbutton:hover .toolbar-trigger, .aui-toolbar .toolbar-group .toolbar-trigger:focus, .aui-toolbar .toolbar-group .toolbar-trigger:hover, .aui-toolbar .toolbar-group button:focus, .aui-toolbar .toolbar-group button:hover, .aui-toolbar .aui-dd-parent .aui-dd-trigger:focus, .aui-toolbar .aui-dd-parent .aui-dd-trigger:hover, .aui-toolbar .toolbar-group .active .toolbar-trigger:hover {
+		background: var(--accent-color);
+		border-color: var(--accent-color);
+		color: var(--text-color);
+	}
+	
+	.aui-toolbar .toolbar-group .toolbar-trigger {
+		color: var(--text-color);
+		background: var(--accent-color);
+	}
+	
+	.issue-body-content .module>.mod-header>h1, .issue-body-content .module>.mod-header>h2, .issue-body-content .module>.mod-header>h3, .issue-body-content .module>.mod-header>h4, .issue-body-content .module>.mod-header>h5, .issue-body-content .module>.mod-header>h6 {
+		background-color: var(--background-color);
+	}
+	
+	h1, h2, h3, h4 {
+		color: var(--faded-text-color);
+	}
+	
+	.adg3 #details-module .item strong {
+		color: var(--faded-text-color);
+	}
+	
+	.preformatted, .code {
+		border: 1px solid var(--accent-color);
+		background: var(--background-color);
+	}
+	
+	.code-quote, .code-quote .code-keyword, .code-quote .code-object {
+		color: var(--code-string);
+	}
+	
+	.code-keyword {
+		color: var(--code-reserved);
+	}
+	
+	blockquote {
+		border-left: 1px solid var(--faded-text-color);;
+		color: var(--faded-text-color);
+	}
+	
+	.adg3 #attachmentmodule .issue-drop-zone .issue-drop-zone__text {
+		color: var(--faded-text-color);
+	}
+	
+	.issue-body-content .module>.mod-header .ops {
+		background-color: var(--accent-color);
+	}
+	
+	.adg3 .mod-header ul.ops a {
+		color: var(--faded-text-color);
+	}
+	
+	.aui-button-subtle.aui-button:hover, .aui-button:hover, .aui-buttons .aui-button:not(.aui-button-primary):not(.aui-button-link):hover, .aui-theme-default .aui-button.aui-button-subtle:hover {
+    	background: var(--accent-color);
+	}
+	
+	.aui-button-subtle.aui-button:focus, .aui-button-subtle.aui-button:hover, .aui-button:focus, .aui-button:hover, .aui-theme-default .aui-button.aui-button-subtle:focus, .aui-theme-default .aui-button.aui-button-subtle:hover {
+		color: var(--text-color);
+	}
+	
+	.adg3 .issue-data-block.focused, .adg3 .issue-data-block:hover {
+		background-color: var(--background-color);
+	}
+	
+	.aui-button, .aui-button:visited, a.aui-button {
+		color: var(--text-color);
+		background: var(--accent-color);
+	}
+	
+	.adg3 .tabwrap>ul.tabs>li a, .adg3 .tabwrap>ul.tabs>li a:focus, .adg3 .tabwrap>ul.tabs>li a:hover, .adg3 .tabwrap>ul.tabs>li a:link, .adg3 .tabwrap>ul.tabs>li a:visited {
+		background-color: var(--accent-color);
+		color:  var(--faded-text-color);
+	}
+	
+	.adg3 .tabwrap>ul.tabs>li.active>strong {
+		border: none;
+		color: var(--text-color);
+		border-bottom: 2px solid var(--accent-color);
+	}
+	
+	.tabwrap>.tabs.horizontal>li {
+		background: var(--accent-color);
+	}
+	
+	.tabwrap>.tabs.horizontal>li.active>a, .tabwrap>.tabs.horizontal>li.active>strong {
+		background: var(--accent-color);
+		border-bottom-color: var(--accent-color);
+		position: relative;
+	}
+	
+	.adg3 .tabwrap>ul.tabs {
+		border-bottom: 2px solid var(--accent-color);
+	}
+	
+	.aui-lozenge.aui-lozenge-subtle.aui-lozenge-complete {
+		background: var(--highlight-color);
+		color: var(--text-color);
+		border-color: var(--highlight-color);
+	}
+	
+	.aui-lozenge.aui-lozenge-subtle, .aui-lozenge.aui-lozenge-subtle.jira-issue-status-lozenge-blue-gray {
+		background: var(--accent-color);
+		color: var(--faded-text-color);
+		border-color: var(--accent-color);
+	}
+	
+	#navigation-app > div > div > div > span > div {
+		color: var(--text-color);
+		background-color: var(--menu-color);
+		fill: var(--text-color);
+	}
+	
+	#navigation-app > div > div > div > span a {
+		color: var(--text-color);
+		background-color: var(--menu-color);
+	}
+	
+	#navigation-app > div > div > div > span a:hover
+	{
+		background-color: var(--menu-hover-color);
+	}
+	
+	#navigation-app > div > div > div > span button {
+		color: var(--text-color);
+		background-color: var(--menu-color);
+	}
+	
+	#navigation-app > div > div > div > span button:hover
+	{
+		background-color: var(--menu-hover-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) > div:nth-of-type(2) {
+		color: var(--text-color);
+		background-color: var(--submenu-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) button {
+		color: var(--text-color);
+		background-color: var(--submenu-color);
+		fill: var(--text-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) button:hover {
+		background-color: var(--submenu-hover-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) button > div > div {
+		color: var(--text-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) button svg g {
+		fill: var(--text-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) a {
+		color: var(--text-color);
+		background-color: var(--submenu-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) a:hover {
+		background-color: var(--submenu-hover-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) a div div {
+		color: var(--text-color);
+	}
+	
+	#navigation-app > div > div > div > div:nth-of-type(3) a svg g {
+		fill: var(--text-color);
+	}
+	
+	form.aui .multi-select, form.aui .password, form.aui .select, form.aui .text, form.aui .textarea, form.aui .upfile {
+		color: var(--text-color);
+		background-color: var(--text-box-color);
+		border: 1px solid var(--accent-color);
+	}
+	
+	.adg3 .aui-badge.vote-state-on, .adg3 .aui-badge.watch-state-on {
+		color: var(--text-color);
+		background-color: var(--highlight-color);
+	}
+	
+	form.aui .multi-select:hover, form.aui .password:hover, form.aui .select:hover, form.aui .text:hover, form.aui .textarea:hover, form.aui .upfile:hover {
+		background-color: var(--background-color);
+	}
+	
+	form.aui .multi-select:focus, form.aui .password:focus, form.aui .select:focus, form.aui .text:focus, form.aui .textarea:focus, form.aui .upfile:focus {
+		background-color: var(--background-color);
+		border: 1px solid var(--highlight-color);
+		box-shadow: 0 0 0 1px var(--highlight-color);
+	}
+	
+	.sd-comment-preview {
+		background-color: var(--background-color);
+	}
+	
+	h1, h1>span {
+		color: var(--text-color);
+	}
+	
+	.adg3 #ghx-operations .aui-button-subtle:not(.aui-dropdown2-active) {
+		color: var(--text-color);
+	}
+	
+	form.aui input[type=text]:hover {
+		background-color: var(--text-box-color);
+	}
+	
+	form.aui input[type=text]:focus {
+		background-color: var(--text-box-color);
+		border: 1px solid var(--accent-color);
+		outline: 0;
+		box-shadow: 0 0 0 1px var(--accent-color);
+	}
+	
+	form.aui input[type=text] {
+		color: var(--text-color);
+		background-color: var(--text-box-color);
+		border: 1px solid var(--accent-color);
+	}
+	
+	#ghx-backlog {
+		background: var(--background-color);
+		border-left: 1px solid var(--background-color);
+		height: inherit;
+		overflow-y: auto;
+	}
+	
+	.ghx-backlog-container {
+		background: var(--background-color);
+		border-bottom: 1px solid var(--background-color);
+	}
+	
+	.adg3 .js-issue.ghx-selected, .adg3 .js-issue.ghx-selected .ghx-items-container {
+		background: var(--background-color);
+	}
+	.adg3 .ghx-issue.ghx-selected, .adg3 .ghx-issue-compact.ghx-selected {
+		background: var(--background-color);
+	}
+	.adg3 .ghx-issue.ghx-selected, .adg3 .ghx-issue-compact.ghx-selected {
+		background: var(--background-color);
+	}
+	.adg3 .ghx-issue-compact {
+		border: 1px solid var(--background-color);
+	}
+	.ghx-issue-compact.ghx-selected {
+		background: var(--background-color);
+	}
+	.ghx-issue-compact {
+		background: var(--background-color);
+		border: 1px solid var(--background-color);
+		color: var(--text-color);
+	}
+	
+	.adg3 .ghx-summary, .adg3 .ghx-summary .ghx-inner {
+		color: var(--text-color);
+	}
+
+	.adg3 .ghx-summary, .adg3 .ghx-summary .ghx-inner {
+		color: var(--text-color);
+	}
+	
+	.ghx-issue-compact .ghx-end {
+		background: var(--background-color);
+	}
+	
+	.adg3 .js-issue.ghx-flagged, .adg3 .js-issue.ghx-flagged .ghx-items-container {
+		background: var(--accent-color);
+	}
+	.adg3 .ghx-issue.ghx-flagged, .adg3 .ghx-issue-compact.ghx-flagged {
+		background: var(--accent-color);
+	}
+	.adg3 .ghx-issue.ghx-flagged, .adg3 .ghx-issue-compact.ghx-flagged {
+		background: var(--accent-color);
+	}
+	
+	.adg3 .js-issue.ghx-issue-compact:hover, .adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container {
+		background: var(--accent-hover-color);
+	}
+	
+	.adg3 .ghx-key {
+		color: var(--text-color);
+	}
+	
+	.ghx-backlog-header .ghx-name {
+		color: var(--text-color);
+	}
+	
+	.navigator-body {
+		background-color: var(--background-color);
+		border-bottom: 1px solid var(--background-color);
+	}
+	
+	.filter-operations .filter-edited-item span {
+		color: var(--text-color);
+	}
+
+	#content #search-header-view .header-section-primary .aui-nav>li>h1, #content #search-header-view .header-section-primary .aui-page-header-inner>h1, #content #search-header-view .header-section-primary .module>.mod-header>h3, #content #search-header-view .header-section-primary .search-title, #content #search-header-view .header-section-primary .subnavigator-title, #content #search-header-view .header-section-primary>h1, #content .aui-page-header-main .aui-nav>li>h1, #content .aui-page-header-main .aui-page-header-inner>h1, #content .aui-page-header-main .module>.mod-header>h3, #content .aui-page-header-main .search-title, #content .aui-page-header-main .subnavigator-title, #content .aui-page-header-main>h1, #content .aui-page-panel .aui-nav>li>h1, #content .aui-page-panel .aui-page-header-inner>h1, #content .aui-page-panel .module>.mod-header>h3, #content .aui-page-panel .search-title, #content .aui-page-panel .subnavigator-title, #content .aui-page-panel>h1 {
+		color: var(--text-color);
+	}
+	
+	.aui-button.aui-button-light, a.aui-button.aui-button-light, .aui-button:visited.aui-button-light {
+		background: var(--accent-color);
+	}
+	
+	.adg3 .aui-dropdown-trigger, .adg3 .operations>li>.aui-dropdown-trigger, .adg3 .operations>li>a {
+		color: var(--text-color);
+		background: var(--background-color);
+	}
+	
+	.adg3 table.aui {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 #issuetable tr.focused, .adg3 .issue-table tr.focused {
+		background-color: var(--background-color);
+	}
+
+	.adg3 table.aui>tbody>tr.focused, .adg3 table.aui>tbody>tr:hover, .adg3 table.aui>tfoot>tr.focused, .adg3 table.aui>tfoot>tr:hover {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 .links-list tr.focused, .adg3 .links-list tr:hover, .adg3 table.aui tr.focused, .adg3 table.aui tr:hover {
+		background-color: var(--background-color);
+	}
+	
+	table.aui>tbody>tr.focused {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 .list-view .summary .issue-link {
+		color: var(--text-color);
+	}
+	
+	.adg3 table.aui>tbody>tr, .adg3 table.aui>tfoot>tr {
+		background-color: var(--background-color);
+	}
+	
+	.adg3 .criteria-list .aui-button:not(.active) .criteria-wrap .fieldLabel {
+		color: var(--faded-text-color);
+	}
+	
+	.aui-button.aui-button-subtle, .aui-theme-default .aui-button.aui-button-subtle {
+		color: var(--faded-text-color);
+	}
+	
+	.adg3 .links-list thead span, .adg3 table.aui thead span {
+		color: var(--faded-text-color);
+	}
+	
+	time {
+		background: var(--background-color);
+		color: var(--faded-text-color);
+	}
+}
