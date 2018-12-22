@@ -2,20 +2,26 @@
 @name           Intercom Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.1.1
+@version        1.2.0
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
-@var color background-color "Background" #2d2d2d
 @var color conversation-background-color "Conversation Background" #1a1a1a
 @var color highlight-color "Highlight" #689bff
+
+@var color menu-color "Menu" #3b3a3a
+@var color menu-hover-color "Menu hover" #4a495a
+
+@var color submenu-color "Submenu" #2d2c2c
+@var color submenu-hover-color "Submenu hover" #6264a7
 
 @var color accent-color "Accent" #3C414C
 @var color selected-accent-color "Selected Accent" #6264a7
 
 @var color text-color "Text" #EBEBEB
 @var color link-color "Text Link" #b8d9ff
-@var color faded-text-color "Text Faded" #b1b1b1
+@var color faded-text-color "Faded Text" #b1b1b1
+@var color dim-text-color "Dim Text" #919191
 
 @var color message-color "Message" #2d2c2c
 
@@ -57,10 +63,10 @@
 	}
 	
 	.conversation__inbox__outlet {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 	.submenu {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 
 	.submenu__sections__section__mask {
@@ -68,7 +74,7 @@
 	}
 
 	.left-nav {
-		background: var(--accent-color);
+		background: var(--menu-color);
 	}
 
 	.left-nav__link.o__selected,
@@ -88,7 +94,7 @@
 
 	.attribute__completion {
 		background-color: var(--accent-color);
-		color: var(--background-color);
+		color: var(--submenu-color);
 	}
 
 	.profile__completion-indicator {
@@ -96,11 +102,11 @@
 	}
 
 	.conversation__inbox__list {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 
 	.conversation__list__item {
-		background: var(--background-color);
+		background: var(--submenu-color);
 		border-bottom: 1px solid var(--accent-color);
 	}
 
@@ -133,7 +139,7 @@
 	}
 
 	.inbox__card__header {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 
 	.btn__footer,
@@ -143,19 +149,19 @@
 	}
 
 	.inbox__main-container__wrapper {
-		background: var(--background-color);
+		background: var(--submenu-color);
 	}
 
 	.main__content-outlet {
-		background: var(--background-color);
+		background: var(--submenu-color);
 	}
 
 	.conversation__inbox__list-filter {
-		background: var(--background-color);
+		background: var(--submenu-color);
 	}
 
 	.conversation__inbox__current-context {
-		background: var(--background-color);
+		background: var(--submenu-color);
 	}
 
 	.dropdown,
@@ -166,7 +172,7 @@
 	.f__custom-select__box.o__subtle:hover,
 	.f__custom-select__box:hover {
 		background-color: var(--accent-color);
-		border-color: var(--background-color);
+		border-color: var(--submenu-color);
 		color: var(--text-color);
 	}
 
@@ -288,7 +294,7 @@
 
 	.application__component {
 		color: var(--text-color);
-		background-color: var(--conversation-background-color);
+		background-color: var(--menu-color);
 	}
 
 	.submenu__collapse-toggle__icon {
@@ -454,6 +460,10 @@
 		background-color: var(--accent-color);
 	}
 	
+	.c__deemphasized-text, .c__light, .c__lightest {
+		color: var(--dim-text-color);
+	}
+	
 	.t__light-text {
 		color: var(--faded-text-color);
 	}
@@ -517,8 +527,8 @@
 	}
 	
 	.background-select__spacer {
-		background-color: var(--conversation-background-color);
-		border: 1px solid var(--conversation-background-color);
+		background-color: var(--menu-color);
+		border: 1px solid var(--menu-color);
 	}
 	
 	.settings__conversation-sidebar {
@@ -550,11 +560,11 @@
 	}
 	
 	.users-and-companies__predicates-editor {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 	
 	.user-list__header, .user-list__header.o__without-select-all.o__without-selected-users {
-		background-color: var(--background-color);
+		background-color: var(--submenu-color);
 	}
 	
 	.filter-block__details, .filter-block__details__specific-error, .filter-block__name {
@@ -597,7 +607,7 @@
 	}
 	
 	.loading__main-application {
-		background-color: var(--background-color)!important;
+		background-color: var(--submenu-color)!important;
 	}
 	
 	.ds-new__dropdown__block__item.o__selected {
@@ -702,6 +712,16 @@
 	.menu__popover__item {
 		color: var(--text-color);
 	}
+	
+	.intercom-interblocks-link-author-name {
+		color: var(--text-color);
+	}
+	
+	.ic-popup.is-light-theme {
+		background: var(--accent-color);
+		color: var(--text-color);
+	}
+	
 
 	/* scroll bar */
 	::-webkit-scrollbar {
@@ -748,6 +768,14 @@
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
+	
+	div.pluginState.trialPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)),
+			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+	}
 
 	.starterPlan {
 		background: repeating-linear-gradient(45deg, 
@@ -755,6 +783,14 @@
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+	
+	div.pluginState.starterPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)),
+			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.professionalPlan {
@@ -764,6 +800,14 @@
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
+	
+	div.pluginState.professionalPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)),
+			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+	}
 
 	.businessPlan {
 		background: repeating-linear-gradient(45deg, 
@@ -771,6 +815,14 @@
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+	
+	div.pluginState.businessPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)),
+			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.partnerPlan {
@@ -780,6 +832,14 @@
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
+	
+	div.pluginState.partnerPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)),
+			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+	}
 
 	.enterprisePlan {
 		background: repeating-linear-gradient(45deg, 
@@ -788,6 +848,14 @@
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
+	
+	div.pluginState.enterprisePlan {
+		background: repeating-linear-gradient(
+			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)),
+			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+	}
 
 	.kenticoPlan {
 		background: repeating-linear-gradient(45deg, 
@@ -795,5 +863,13 @@
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
+	}
+	
+	div.pluginState.kenticoPlan {
+		background: repeating-linear-gradient(
+			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)),
+			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 3px,
+			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 }
