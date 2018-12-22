@@ -2,25 +2,38 @@
 @name           Preview Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/preview-dark.user.css
-@version        1.0.0
+@version        1.1.0
 @description    A dark theme for Preview.
 @author         Yuriy Sountsov
+
+@var color background-color "Background" #1a1a1a
+@var color text-color "Text" #c5c8c6
+
+@var color link-color "Link" #0366d6
+@var color link-hover-color "Link hover" #0366d6 
+
+@var color menu-color "Menu" #3a3a3a
+@var color menu-hover-color "Menu hover" #646464
+
+@var color header-color "Header" #2f2f2f
+
+@var color highlight-color "Highlight" #3399ff
 
 ==/UserStyle== */
 @-moz-document url-prefix("http://preview:") {
 
 	html {
-		background:#1a1a1a;
+		background:var(--background-color);
 	}
 
 	body {
-		background:#1a1a1a;
-		color: #c5c8c6;
+		background:var(--background-color);
+		color: var(--text-color);
 		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	}
 
 	h1 {
-		color: #1a1a1a;
+		color: var(--background-color);
 	}
 
 	pre {
@@ -67,26 +80,26 @@
 	}
 
 	.note {
-		background:#000;
+		background:var(--background-color);
 		border:none;
 	}
 
 	.resultGroupHeader {
-		background-color: #3a3a3a;
+		background-color: var(--menu-color);
 		background-image: url('content/icons/minus.png');
 	}
 
 		.resultGroupHeader:hover {
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	.rA {
-		background-color: #3a3a3a;
+		background-color: var(--menu-color);
 		background-image: url('content/icons/minus.png');
 	}
 
 		.rA:hover {
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	.resultGroupProjectPath {
@@ -94,7 +107,7 @@
 	}
 
 		.rL:hover, .referenceLine:hover {
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	a b {
@@ -114,8 +127,8 @@
 	}
 
 	.rN, .resultGroupFileName {
-		background-color: #2f2f2f;
-		color: #c5c8c6;
+		background-color: var(--header-color);
+		color: var(--text-color);
 	}
 
 	.resultItem {
@@ -125,7 +138,7 @@
 	}
 
 		.resultItem:hover {
-			background-color: #646464 !important;
+			background-color: var(--menu-hover-color) !important;
 		}
 
 	.projectExplorerBody, .namespaceExplorerBody, .solutionExplorerBody {
@@ -139,12 +152,12 @@
 
 	.referenceDisabled {
 		background-image: url('content/icons/192.png');
-		color: lightgray;
+		color: var(--text-color);
 	}
 
 		.typeDeclarationNode:focus, .tDN:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.projectCS {
@@ -160,8 +173,8 @@
 	}
 
 		.cs:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.vb {
@@ -169,8 +182,8 @@
 	}
 
 		.vb:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.csproj {
@@ -178,8 +191,8 @@
 	}
 
 		.csproj:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.vbproj {
@@ -187,8 +200,8 @@
 	}
 
 		.vbproj:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.xaml {
@@ -196,8 +209,8 @@
 	}
 
 		.xaml:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.ts {
@@ -205,17 +218,17 @@
 	}
 
 		.ts:focus {
-			background-color: #3399ff;
-			color: #1a1a1a;
+			background-color: var(--highlight-color);
+			color: var(--background-color);
 		}
 
 	.selectedFilename {
-		background-color: #3399ff;
-		color: #1a1a1a;
+		background-color: var(--highlight-color);
+		color: var(--background-color);
 	}
 
 		.selectedFilename:link, .selectedFilename:visited, .selectedFilename:hover, .selectedFilename:active {
-			color: #1a1a1a;
+			color: var(--background-color);
 		}
 
 	.currentResult {
@@ -226,7 +239,7 @@
 	}
 
 		.currentResult:hover {
-			background-color: #646464 !important;
+			background-color: var(--menu-hover-color) !important;
 		}
 
 	.resultKind {
@@ -240,7 +253,7 @@
 
 	.rH {
 		background-color: #68217A;
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	.cz {
@@ -256,9 +269,9 @@
 	}
 
 	.dH {
-		background-color: #1d1d1d;
-		border-top: #000 solid;
-		color: #c5c8c6;
+		background-color: var(--background-color);
+		border-top: var(--background-color) solid;
+		color: var(--text-color);
 		opacity: 1;
 	}
 
@@ -273,7 +286,7 @@
 	}
 
 	#logoText {
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	#currentVersion {
@@ -282,29 +295,29 @@
 
 	#downloadButton {
 		background-color: #68217A;
-		color: #1a1a1a;
+		color: var(--background-color);
 	}
 
 	#feedbackButtonLink {
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	#downloadButtonLink {
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	#licenseButtonLink {
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	#helpButtonLink {
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 	.result {
 		margin: 16px;
 		padding: 4px;
-		background-color: #3a3a3a;
+		background-color: var(--menu-color);
 	}
 
 	.r, .rd {
@@ -313,7 +326,7 @@
 
 	.r {
 		border-width: 1px;
-		border-color: #3a3a3a;
+		border-color: var(--menu-color);
 		border-style: solid;
 	}
 
@@ -406,24 +419,26 @@
 	a.s, a.s:hover {
 		color: #a31515;
 	}
+	
+		p a, 
+	ul a, 
+	ol a, 
+	.blueLink, .blueLink:link {
+		color:var(--link-color) !important;
+		font-weight: 600!important; 
+		text-decoration:none;
+	}
 
 	p a:link, p a:hover, p a:focus, p a:active,
 	ul a:link, ul a:hover, ul a:focus, ul a:active,
 	ol a:link, ol a:hover, ol a:focus, ol a:active,
 	.blueLink:hover, .blueLink:focus, .blueLink:active {
-		color:#0366d6 !important;
+		color:var(--link-hover-color) !important;
 		font-weight: 600!important; 
 		text-decoration:underline !important;
 	}
 
-	p a, 
-	ul a, 
-	ol a, 
-	.blueLink, .blueLink:link {
-		color:#0366d6 !important;
-		font-weight: 600!important; 
-		text-decoration:none;
-	}
+
 
 	.partialTypeLink {
 		color: #569cd6;
@@ -440,7 +455,7 @@
 
 		.documentOutlineButton:hover {
 			border-color: #eeccc0;
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	.projectExplorerButton {
@@ -450,7 +465,7 @@
 
 		.projectExplorerButton:hover {
 			border-color: #90e6d4;
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	.namespaceExplorerButton {
@@ -460,7 +475,7 @@
 
 		.namespaceExplorerButton:hover {
 			border-color: #e0e0e0;
-			background-color: #646464;
+			background-color: var(--menu-hover-color);
 		}
 
 	.documentOutlineDiv:hover {
@@ -472,12 +487,12 @@
 	}
 
 	.activeTab {
-		background-color: #1a1a1a;
+		background-color: var(--background-color);
 	}
 
 	.inactiveTab, .inactiveTab:link, .inactiveTab:visited {
 		background-color: #68217A;
-		color: #c5c8c6;
+		color: var(--text-color);
 	}
 
 		.inactiveTab:hover, .inactiveTab:active {
@@ -486,38 +501,50 @@
 
 		#sourcesList li {
 			background-color: steelblue;
-			color: #1a1a1a;
+			color: var(--background-color);
 		}
 
 		.externalIndexLinks li {
 			background-color: purple;
-			color: #1a1a1a;
+			color: var(--background-color);
 		}
 
 			.externalIndexLinks li a {
-				color: #1a1a1a;
+				color: var(--background-color);
 			}
 
 		.msbuildlink:hover {
-			background-color: whitesmoke;
+			background-color: var(--text-color);
 		}
 
 	.projectInfo {
-		color: lightgray;
+		color: var(--text-color);
 	}
 
 	frameset {
 		border: none;
+	}
+	
+	* [style="background: yellow;"],
+	* [style="background: cyan;"],
+	* [style="background: cyan; border-color: black; border-style: solid; border-width: 1px;"]{
+		background: #2d4765 !important;
+		border: #445464 1px solid;
+	}
+	
+	* [style="background: lime;"] {
+		background: var(--text-color) !important;
+		color: var(--background-color) !important;
 	}
 
   /* scroll bar */
   ::-webkit-scrollbar {
     max-width: 10px !important;
     max-height: 10px !important;
-    background: #1d1d1d !important;
+    background: var(--background-color) !important;
   }
   ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-    background: #1d1d1d !important;
+    background: var(--background-color) !important;
   }
   ::-webkit-scrollbar-thumb {
     background: rgba(175, 175, 175, .5) !important;
