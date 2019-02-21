@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      titanar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.2.0
+@version        1.2.1
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -61,12 +61,16 @@
 		color: var(--text-color);
 		background-color: var(--conversation-background-color);
 	}
-	
+
 	.conversation__inbox__outlet {
 		background-color: var(--submenu-color);
 	}
 	.submenu {
 		background-color: var(--submenu-color);
+	}
+
+	.dialog__body {
+		background: var(--conversation-background-color);
 	}
 
 	.submenu__sections__section__mask {
@@ -126,8 +130,8 @@
 	.conversation__messenger-card:not(.messenger-preview__home__card),
 	.conversation__text .intercom-interblocks-link,
 	.intercom-interblocks .intercom-interblocks-messenger-card {
-		background-color: var(--reply-color);
-		border: 1px solid var(--reply-color);
+		background-color: var(--accent-color);
+		border: 1px solid var(--accent-color);
 	}
 
 	.conversation__link__container .intercom-interblocks-link {
@@ -187,7 +191,7 @@
 	.article-suggestion-card.o__expanded {
 		background-color: var(--selected-accent-color);
 	}
-	
+
 	.article-suggestion-card__body {
 		color: var(--text-color);
 	}
@@ -402,46 +406,55 @@
 		border-color: var(--reply-color);
 		background-color: var(--reply-color);
 	}
-	
-	.color-map__early-2018-brand-refresh .overlay__standard-tooltip, .color-map__early-2018-brand-refresh .packaging__tooltip {
-    	background-color: var(--accent-color);
-    	color: var(--text-color);
+
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip,
+	.color-map__early-2018-brand-refresh .packaging__tooltip {
+		background-color: var(--accent-color);
+		color: var(--text-color);
 	}
-	
+
 	.conversation__list__badge.o__unread {
 		background-color: var(--highlight-color);
 	}
-	
+
 	.conversation__list__item.o__active .conversation__card__header {
 		padding-left: 18px;
 		border-left: 2px solid var(--highlight-color);
 	}
-	
-	.nav-vertical__link.ember-transitioning-in, .nav-vertical__link.ember-transitioning-in:hover, .nav-vertical__link.o__selected:not(.ember-transitioning-out), .nav-vertical__link.o__selected:not(.ember-transitioning-out):hover, .nav-vertical__link:hover, .nav-vertical__settings-icon:hover {
+
+	.nav-vertical__link.ember-transitioning-in,
+	.nav-vertical__link.ember-transitioning-in:hover,
+	.nav-vertical__link.o__selected:not(.ember-transitioning-out),
+	.nav-vertical__link.o__selected:not(.ember-transitioning-out):hover,
+	.nav-vertical__link:hover,
+	.nav-vertical__settings-icon:hover {
 		color: var(--highlight-color);
 	}
-	
+
 	.left-nav__link.o__logo {
 		fill: var(--highlight-color);
 	}
-	
-	.btn.o__primary, .btn.o__primary:focus {
+
+	.btn.o__primary,
+	.btn.o__primary:focus {
 		background-color: #286efa;
 	}
-	
-	.btn.o__primary.o__forced-active, .btn.o__primary:active, .btn.o__primary:hover {
+
+	.btn.o__primary.o__forced-active,
+	.btn.o__primary:active,
+	.btn.o__primary:hover {
 		background-color: var(--highlight-color);
 	}
-	
+
 	.submenu__collapse-toggle__icon:hover {
 		color: var(--highlight-color);
 		opacity: 1;
 	}
-	
+
 	.article-suggestion-card:hover .article-suggestion-card__button:hover {
-    	background-color: var(--highlight-color);
+		background-color: var(--highlight-color);
 	}
-	
+
 	.btn.o__secondary:hover {
 		color: var(--text-color);
 		border: 1px solid var(--selected-accent-color);
@@ -451,277 +464,414 @@
 	.conversation__mini-card:hover {
 		border: 1px solid var(--highlight-color);
 	}
-	
-	.color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__edited-by, .color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__uneditable, .color-map__early-2018-brand-refresh .overlay__standard-tooltip a {
+
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__edited-by,
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip .attribute__info-tooltip__uneditable,
+	.color-map__early-2018-brand-refresh .overlay__standard-tooltip a {
 		color: var(--text-color);
 	}
-	
+
 	.ds-new__dropdown {
 		background-color: var(--accent-color);
 	}
-	
-	.c__deemphasized-text, .c__light, .c__lightest {
+
+	.c__deemphasized-text,
+	.c__light,
+	.c__lightest {
 		color: var(--dim-text-color);
 	}
-	
+
 	.t__light-text {
 		color: var(--faded-text-color);
 	}
-	
-	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .f__custom-select__check, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .t__light-text, .color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .tag_or_segment_name, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .f__custom-select__check, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .t__light-text, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .tag_or_segment_name {
+
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .f__custom-select__check,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .t__light-text,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover .tag_or_segment_name,
+	.color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover,
+	.color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .f__custom-select__check,
+	.color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .t__light-text,
+	.color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover .tag_or_segment_name {
 		color: var(--text-color) !important;
 	}
-	
-	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover, .color-map__early-2018-brand-refresh .ds-new__event__option:focus, .color-map__early-2018-brand-refresh .ds-new__event__option:hover:focus, .color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover {
+
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__hoverable:hover,
+	.color-map__early-2018-brand-refresh .ds-new__event__option:focus,
+	.color-map__early-2018-brand-refresh .ds-new__event__option:hover:focus,
+	.color-map__early-2018-brand-refresh .overlay__list-item.o__hoverable:hover {
 		background-color: var(--selected-accent-color);
 	}
-	
-	.f__custom-select__box.o__opened, .f__custom-select__box:active {
+
+	.f__custom-select__box.o__opened,
+	.f__custom-select__box:active {
 		border-color: var(--accent-color);
 	}
-	
+
 	.f__custom-select__box.o__opened:hover {
 		color: var(--text-color);
 		background-color: var(--selected-accent-color);
 		border-color: var(--selected-accent-color);
 	}
-	
+
 	.pill {
 		background-color: var(--accent-color);
 		color: var(--faded-text-color);
 	}
-	
-	.t__solo-link:active, .t__solo-link:hover, .t__solo-link__outer:active .t__solo-link__inner, .t__solo-link__outer:hover .t__solo-link__inner {
+
+	.t__solo-link:active,
+	.t__solo-link:hover,
+	.t__solo-link__outer:active .t__solo-link__inner,
+	.t__solo-link__outer:hover .t__solo-link__inner {
 		color: var(--text-color);
 	}
-	
+
 	.ds-new__dropdown__block__item {
 		color: var(--text-color);
 	}
-	
-	.btn.o__destructive, .btn.o__destructive:focus, .btn.o__destructive:hover, .btn.o__secondary, .btn.o__secondary-destructive, .btn.o__secondary-destructive:focus, .btn.o__secondary-destructive:hover, .btn.o__secondary-live, .btn.o__secondary:focus, .btn.o__secondary:hover {
+
+	.btn.o__destructive,
+	.btn.o__destructive:focus,
+	.btn.o__destructive:hover,
+	.btn.o__secondary,
+	.btn.o__secondary-destructive,
+	.btn.o__secondary-destructive:focus,
+	.btn.o__secondary-destructive:hover,
+	.btn.o__secondary-live,
+	.btn.o__secondary:focus,
+	.btn.o__secondary:hover {
 		background-color: var(--accent-color);
 	}
-	
+
 	/* required for the above rule to not overwrite the existing version of this */
 	.btn.o__subtle {
 		border-color: transparent;
 		background-color: transparent;
 	}
-	
-	.btn.o__secondary.o__forced-active, .btn.o__secondary:active {
+
+	.btn.o__secondary.o__forced-active,
+	.btn.o__secondary:active {
 		color: var(--text-color);
 		background-color: var(--selected-accent-color);
 	}
-	
+
 	.submenu__sections__section__items__item {
 		color: var(--text-color);
 	}
-	
-	.submenu__sections__section__items__item.ember-transitioning-in, .submenu__sections__section__items__item.ember-transitioning-in .submenu__sections__section__items__item__count, .submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out), .submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out) .submenu__sections__section__items__item__count, .submenu__sections__section__items__item:hover, .submenu__sections__section__items__item:hover .submenu__sections__section__items__item__count {
+
+	.submenu__sections__section__items__item.ember-transitioning-in,
+	.submenu__sections__section__items__item.ember-transitioning-in .submenu__sections__section__items__item__count,
+	.submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out),
+	.submenu__sections__section__items__item.o__selected:not(.ember-transitioning-out) .submenu__sections__section__items__item__count,
+	.submenu__sections__section__items__item:hover,
+	.submenu__sections__section__items__item:hover .submenu__sections__section__items__item__count {
 		color: var(--highlight-color);
 	}
-	
+
 	.background-select__background-selector.o__background-gray {
 		background-color: var(--conversation-background-color);
 	}
-	
+
 	.background-select__spacer {
 		background-color: var(--menu-color);
 		border: 1px solid var(--menu-color);
 	}
-	
+
 	.settings__conversation-sidebar {
 		color: var(--text-color);
 		fill: var(--text-color) !important;
 	}
-	
+
 	.visibility__row {
 		background-color: var(--accent-color);
 		color: var(--text-color);
 		border-bottom: 1px solid var(--text-color);
 	}
-	
+
 	.visibility__row__name {
 		color: var(--text-color);
 	}
-	
+
 	.visibility__row__description {
 		color: var(--faded-text-color);
 	}
-	
+
 	.btn__tertiary {
 		color: var(--highlight-color);
 	}
-	
+
 	.m__settings__notifications__header {
 		background-color: var(--accent-color);
 		border-bottom: 1px solid var(--text-color);
 	}
-	
+
 	.users-and-companies__predicates-editor {
 		background-color: var(--submenu-color);
 	}
-	
-	.user-list__header, .user-list__header.o__without-select-all.o__without-selected-users {
+
+	.user-list__header,
+	.user-list__header.o__without-select-all.o__without-selected-users {
 		background-color: var(--submenu-color);
 	}
-	
-	.filter-block__details, .filter-block__details__specific-error, .filter-block__name {
+
+	.filter-block__details,
+	.filter-block__details__specific-error,
+	.filter-block__name {
 		color: var(--text-color);
 	}
-	
-	.filter-block.o__clickable:hover, .filter-block.o__open, .filter-block.o__open:hover {
+
+	.filter-block.o__clickable:hover,
+	.filter-block.o__open,
+	.filter-block.o__open:hover {
 		background-color: var(--selected-accent-color);
 	}
-	
-	.filter-block.o__clickable:hover .filter-block__details, .filter-block.o__clickable:hover .filter-block__name, .filter-block.o__open .filter-block__details, .filter-block.o__open .filter-block__name, .filter-block.o__open:hover .filter-block__details, .filter-block.o__open:hover .filter-block__name {
+
+	.filter-block.o__clickable:hover .filter-block__details,
+	.filter-block.o__clickable:hover .filter-block__name,
+	.filter-block.o__open .filter-block__details,
+	.filter-block.o__open .filter-block__name,
+	.filter-block.o__open:hover .filter-block__details,
+	.filter-block.o__open:hover .filter-block__name {
 		color: var(--text-color);
 	}
-	
+
 	.f__custom-select__box {
 		background-color: var(--accent-color);
 		color: var(--text-color);
 	}
-	
+
 	.btn.o__toggle.o__selected {
 		background-color: var(--selected-accent-color);
 	}
-	
-	.btn.o__toggle.o__selected, .btn.o__toggle:hover {
+
+	.btn.o__toggle.o__selected,
+	.btn.o__toggle:hover {
 		box-shadow: none;
 		color: var(--text-color);
 		border: 1px solid var(--selected-accent-color);
 		z-index: 1;
 		position: relative;
 	}
-	
+
 	.btn.o__toggle {
 		background-color: var(--accent-color);
 		color: var(--text-color);
 	}
-	
+
 	.btn.o__toggle.o__selected:hover {
 		color: var(--highlight-color);
 		border: 1px solid var(--selected-accent-color);
 	}
-	
+
 	.loading__main-application {
 		background-color: var(--submenu-color)!important;
 	}
-	
+
 	.ds-new__dropdown__block__item.o__selected {
 		color: var(--text-color);
 		background-color: var(--selected-accent-color);
 	}
-	
-	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .f__custom-select__check, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .inbox__inbox-picker__link, .color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .submenu__sections__section__items__item__count, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .f__custom-select__check, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .inbox__inbox-picker__link, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .submenu__sections__section__items__item__count {
+
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .f__custom-select__check,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .inbox__inbox-picker__link,
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .submenu__sections__section__items__item__count,
+	.color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected,
+	.color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .f__custom-select__check,
+	.color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .inbox__inbox-picker__link,
+	.color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .submenu__sections__section__items__item__count {
 		color: var(--text-color);
 	}
-	
-	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .interface-icon path, .color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .interface-icon path {
+
+	.color-map__early-2018-brand-refresh .dropdown__list-item.o__item-selected .interface-icon path,
+	.color-map__early-2018-brand-refresh .ds-new__dropdown__block__item.o__selected .interface-icon path {
 		fill: var(--text-color)!important;
 	}
-	
+
 	.ds-new__dropdown__block__item:focus {
 		background-color: var(--highlight-color);
 		color: var(--text-color);
 		outline: 0;
 	}
-	
-	.interface-icon circle, .interface-icon ellipse, .interface-icon line, .interface-icon polygon, .interface-icon polyline, .interface-icon rect {
+
+	.interface-icon circle,
+	.interface-icon ellipse,
+	.interface-icon line,
+	.interface-icon polygon,
+	.interface-icon polyline,
+	.interface-icon rect {
 		fill: var(--highlight-color)!important;
 	}
 	
+	
+
 	/* Required fix for icon highlight being the same as the background highlight*/
-	a:hover>.interface-icon circle,a:hover>.interface-icon ellipse,a:hover>.interface-icon line,a:hover>.interface-icon path,a:hover>.interface-icon polygon,a:hover>.interface-icon polyline,a:hover>.interface-icon rect,span:hover>.interface-icon circle,span:hover>.interface-icon ellipse,span:hover>.interface-icon line,span:hover>.interface-icon path,span:hover>.interface-icon polygon,span:hover>.interface-icon polyline,span:hover>.interface-icon rect {
+	a:hover > .interface-icon circle,
+	a:hover > .interface-icon ellipse,
+	a:hover > .interface-icon line,
+	a:hover > .interface-icon path,
+	a:hover > .interface-icon polygon,
+	a:hover > .interface-icon polyline,
+	a:hover > .interface-icon rect,
+	span:hover > .interface-icon circle,
+	span:hover > .interface-icon ellipse,
+	span:hover > .interface-icon line,
+	span:hover > .interface-icon path,
+	span:hover > .interface-icon polygon,
+	span:hover > .interface-icon polyline,
+	span:hover > .interface-icon rect {
 		fill: var(--text-color)!important;
 	}
-	
+
 	.modal {
 		background-color: var(--accent-color);
 	}
-	
+
 	.tagger__holder {
 		background-color: var(--accent-color);
 	}
-	
+
 	input {
-		background-color:  var(--accent-color);
+		background-color: var(--accent-color);
 		color: var(--text-color);
 	}
-	
+
 	.nav-vertical__search__input {
-		background-color:  var(--accent-color);
+		background-color: var(--accent-color);
 		color: var(--text-color);
 	}
-	
-	.dropdown__list-item.o__hoverable:hover, .dropdown__list-item.o__selected, .overlay__list-item.o__hoverable:hover {
+
+	.dropdown__list-item.o__hoverable:hover,
+	.dropdown__list-item.o__selected,
+	.overlay__list-item.o__hoverable:hover {
 		background-color: var(--highlight-color);
 		color: var(--text-color);
 	}
-	
+
 	.nav-vertical__search {
-		background-color:  var(--accent-color);
+		background-color: var(--accent-color);
 	}
-	
+
 	.nav-vertical__search__backing {
-		background-color:  var(--accent-color);
+		background-color: var(--accent-color);
 	}
-	
+
 	.inbox__send-and-change-state__primary-action {
-		color:  var(--text-color);
+		color: var(--text-color);
 	}
-	
+
 	.inbox__send-and-change-state__primary-action:hover {
-		background-color:  var(--highlight-color);
+		background-color: var(--highlight-color);
 	}
-	
+
 	.inbox__send-and-change-state__opener:hover {
-		background-color:  var(--highlight-color);
+		background-color: var(--highlight-color);
 	}
-	
+
 	.user__hovercard {
 		background: var(--accent-color);
 	}
-	
+
 	.attribute__completion.o__complete {
 		background-color: var(--selected-accent-color);
 	}
-	
+
+	.attribute__editor-text-field:focus {
+		background-color: var(--accent-color);
+		border-color: var(--selected-accent-color);
+	}
+
 	.profile__completion-indicator-inner {
 		background-color: var(--selected-accent-color);
 	}
-	
+
 	.c__active {
 		color: var(--highlight-color);
 	}
-	
+
 	.c__darkest {
 		color: var(--text-color);
 	}
-	
+
 	.educate__icon.o__deemphasized {
 		stroke: var(--text-color);
 	}
-	
+
 	.menu__popover {
 		background: var(--accent-color);
 	}
-	
+
 	.menu__popover__item {
 		color: var(--text-color);
 	}
-	
+
 	.intercom-interblocks-link-author-name {
 		color: var(--text-color);
 	}
-	
+
 	.ic-popup.is-light-theme {
 		background: var(--accent-color);
 		color: var(--text-color);
 	}
+
+	.inbox__conversation-controls__additional-inserters,
+	.inbox__conversation-controls__inserter-popover {
+		background-color: var(--submenu-color);
+	}
+
+	.article-suggestion-card__button,
+	.article-suggestion-card__restricted-button {
+		border-top-color: var(--accent-color);
+		background-color: var(--accent-color);
+	}
+
+	.m__saved-replies__list-item {
+		color: var(--text-color);
+	}
+
+	.gif__popover__mask__bottom,
+	.popover-fade__mask__bottom {
+		background: linear-gradient(rgba(255, 255, 255, 0), var(--submenu-color) 20px);
+	}
+
+	.overlay__popover-caret .overlay__popover-caret__vector {
+		fill: var(--submenu-color);
+	}
+
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.text-component p,
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.text-component p.header {
+		color: var(--text-color);
+	}
+
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.text-component p,
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.text-component p.header {
+		color: var(--text-color);
+	}
+
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.list-component .list .list-item .title {
+		color: var(--text-color);
+	}
+
+	.messenger-framework__panel__mask__bottom {
+		background: linear-gradient(rgba(255, 255, 255, 0), var(--submenu-color) 20px);
+	}
+
+	.color-map__early-2018-brand-refresh .overlay__tooltip__caret path {
+		fill: var(--submenu-color);
+	}
 	
+	.messenger-framework__popover {
+    background-color: var(--submenu-color);
+}
+	
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.input-component input {
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+	
+	.conversation__part .intercom-interblocks-messenger-card:not(.o__interactive) .intercom-card-component.list-component .list-item[data-action-type=url]:hover, .o__interactive.intercom-interblocks-messenger-card .intercom-card-component.list-component .list-item[data-action-type]:hover {
+    background-color: var(--submenu-hover-color);
+}
 
 	/* scroll bar */
 	::-webkit-scrollbar {
@@ -762,114 +912,107 @@
 	}
 
 	.trialPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)),
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.trialPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)),
-			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)),
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--trial-hue), calc(var(--trial-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.starterPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)),
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.starterPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)),
-			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)),
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--starter-hue), calc(var(--starter-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.professionalPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)),
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.professionalPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)),
-			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)),
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--professional-hue), calc(var(--professional-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.businessPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)),
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.businessPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)),
-			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)),
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--business-hue), calc(var(--business-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.partnerPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)),
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.partnerPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)),
-			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)),
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--partner-hue), calc(var(--partner-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.enterprisePlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)),
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.enterprisePlan {
-		background: repeating-linear-gradient(
-			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)),
-			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)),
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--enterprise-hue), calc(var(--enterprise-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 
 	.kenticoPlan {
-		background: repeating-linear-gradient(45deg, 
+		background: repeating-linear-gradient(45deg,
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)),
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 10px,
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 10px,
 		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 20px);
 	}
-	
+
 	div.pluginState.kenticoPlan {
-		background: repeating-linear-gradient(
-			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)),
-			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 3px,
-			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
-			hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
+		background: repeating-linear-gradient( hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)),
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25%)) 3px,
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 3px,
+		hsl(var(--kentico-hue), calc(var(--kentico-saturation) * 1%), calc(25% + var(--plan-contrast) * 0.4%)) 6px);
 	}
 }
