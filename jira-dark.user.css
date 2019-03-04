@@ -1,13 +1,14 @@
-	/* ==UserStyle==
+/* ==UserStyle==
 @name           JIRA Dark Theme
-@namespace      github.com/openstyles/stylus
-@updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/jira-dark.user.css
-@version        0.1.0
+@namespace      seruminar/DarkThemes
+@updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/jira-dark.user.css
+@version        0.1.1
 @description    A dark theme for JIRA.
 @author         Yuriy Sountsov
 
-@var color background-color "Background" #201f1f
+@var color background-color "Background" #282828
 @var color highlight-color "Highlight" #689bff
+@var color text-box-color "Textbox" #2d2c2c
 
 @var color theme-color "Theme" #464775
 
@@ -22,12 +23,13 @@
 
 @var color text-color "Text" #EBEBEB
 @var color link-color "Text Link" #b8d9ff
-@var color text-box-color "Textbox" #2d2c2c
+
 
 @var color faded-text-color "Text Faded" #b1b1b1
 
 @var color code-string "Code: string" #d69d85
 @var color code-reserved "Code: reserved" #569cd6
+@var color code-type "Code: type" #4ec9b0
 
 ==/UserStyle== */
 @-moz-document regexp("http.*atlassian\\.net\\/(secure|browse|issues).*"), url-prefix("https://automation.codebarrel.io") {
@@ -128,6 +130,10 @@
 	
 	.code-keyword {
 		color: var(--code-reserved);
+	}
+	
+	.code-object {
+		color: var(--code-type);
 	}
 	
 	blockquote {
@@ -300,8 +306,54 @@
 		color: var(--text-color);
 	}
 	
+	.adg3 .issue-body-content time {
+		color:  var(--text-color);
+	}
+	
+	.adg3 .editable-field:hover, .adg3 .editable-field:hover>span {
+		background-color: var(--background-color);
+	}
+	
+	.ghx-issuetable {
+		background-color: var(--background-color);
+	}
+	
+	.ghx-issuetable td.assignee > a {
+		color: var(--text-color);
+	}
+	
+	.ghx-issuetable .issuerow:hover {
+    	background-color: var(--accent-color);
+	}
+	
+	.adg3 #linkingmodule .links-list dd:hover {
+		background-color: var(--accent-color);
+	}
+	.adg3 .mod-content dl.links-list dd:hover {
+		background-color: var(--accent-color);
+	}
+	.adg3 .mod-content dl.links-list dd {
+		background-color: var(--background-color);
+	}
+	.links-list dd:hover {
+		background-color: var(--accent-color);
+	}
+	
+	.adg3 #details-module .labels .lozenge {
+		background-color: var(--accent-color);
+	}
+	
+	.aui-badge, aui-badge {
+		background-color: var(--accent-color);
+		color: var(--faded-text-color);
+	}
+	
 	form.aui input[type=text]:hover {
 		background-color: var(--text-box-color);
+	}
+	
+	.adg3 #details-module .labels .lozenge span {
+		color: var(--faded-text-color);
 	}
 	
 	form.aui input[type=text]:focus {
