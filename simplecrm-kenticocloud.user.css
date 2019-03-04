@@ -1,7 +1,8 @@
 /* ==UserStyle==
 @name           Simple CRM Kentico Cloud Theme
-@namespace      github.com/openstyles/stylus
-@version        1.0.1
+@namespace      seruminar/DarkThemes
+@updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/simplecrm-kenticocloud.user.css
+@version        1.0.2
 @description    A Kentico Cloud theme for Simple CRM.
 @author         Yuriy Sountsov
 ==/UserStyle== */
@@ -86,16 +87,7 @@
 		border-radius: 2px;
 	}
 
-	#otherCasesList, #emailAttachmentsList, #caseAttachmentsList, #accountServicesList, #otherCasesList, #caseAttachmentsList {
-		max-height: 100px !important;
-		overflow-y: auto !important;
-		_min-height: 100px !important;
-	}
 
-	#emailAttachments, #otherCases, #caseAttachments {
-		min-height: initial !important;
-		max-height: initial !important;
-	}
 
 	#lcontent .case.sales {
 		border: none !important;
