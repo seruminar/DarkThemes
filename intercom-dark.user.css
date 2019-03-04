@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Intercom Dark Theme
-@namespace      titanar/DarkThemes
-@updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/intercom-dark.user.css
-@version        1.2.1
+@namespace      seruminar/DarkThemes
+@updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/intercom-dark.user.css
+@version        1.2.2
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -702,8 +702,8 @@
 	.interface-icon rect {
 		fill: var(--highlight-color)!important;
 	}
-	
-	
+
+
 
 	/* Required fix for icon highlight being the same as the background highlight*/
 	a:hover > .interface-icon circle,
@@ -859,19 +859,24 @@
 	.color-map__early-2018-brand-refresh .overlay__tooltip__caret path {
 		fill: var(--submenu-color);
 	}
-	
+
 	.messenger-framework__popover {
-    background-color: var(--submenu-color);
-}
-	
+		background-color: var(--submenu-color);
+	}
+
 	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.input-component input {
-    background: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-	
-	.conversation__part .intercom-interblocks-messenger-card:not(.o__interactive) .intercom-card-component.list-component .list-item[data-action-type=url]:hover, .o__interactive.intercom-interblocks-messenger-card .intercom-card-component.list-component .list-item[data-action-type]:hover {
-    background-color: var(--submenu-hover-color);
-}
+		background: var(--accent-color);
+		border: 1px solid var(--accent-color);
+	}
+
+	.conversation__part .intercom-interblocks-messenger-card:not(.o__interactive) .intercom-card-component.list-component .list-item[data-action-type=url]:hover,
+	.o__interactive.intercom-interblocks-messenger-card .intercom-card-component.list-component .list-item[data-action-type]:hover {
+		background-color: var(--submenu-hover-color);
+	}
+
+	.messenger-framework__feature-pointer {
+		background-color: var(--submenu-color);
+	}
 
 	/* scroll bar */
 	::-webkit-scrollbar {
