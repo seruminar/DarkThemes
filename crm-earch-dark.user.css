@@ -1,0 +1,138 @@
+/* ==UserStyle==
+@name           CRM Search Dark Theme
+@namespace      seruminar/DarkThemes
+@updateURL   	https://raw.githubusercontent.com/titanar/DarkThemes/master/crm-earch-dark.user.css
+@version        1.0.0
+@author         Yuriy Sountsov
+
+@var color background-color "Background" #1a1a1a
+
+@var color input-color "Input" #3b3a3a
+@var color input-hover-color "Input hover" #4a495a
+
+@var color text-color "Text" #cBcBcB
+
+@var color highlight-color "Highlight" #3C414C
+
+==/UserStyle== */
+@-moz-document url-prefix("https://www.kentico.com/specials/crm-emails-search") {
+	a:active,
+	.k-link:active,
+	a:visited,
+	.k-link:visited {
+		color: #ff0000;
+	}
+
+	.header {
+		display: none;
+	}
+
+	footer {
+		display: none;
+	}
+
+	main {
+		margin-top: 0;
+	}
+
+	.zone:first-of-type:not(.hero) {
+		display: none;
+	}
+
+	body {
+		background-color: var(--background-color);
+		color: var(--text-color);
+	}
+
+	.k-form input[type="text"],
+	.filter input[type="text"],
+	.k-form input[type="password"],
+	.filter input[type="password"],
+	.k-form input[type="file"],
+	.filter input[type="file"],
+	.k-form input[type="email"],
+	.filter input[type="email"],
+	.k-form textarea,
+	.filter textarea {
+		background: var(--input-color);
+		color: var(--text-color);
+	}
+
+	.k-form input[type="text"]:focus,
+	.filter input[type="text"]:focus,
+	.k-form input[type="password"]:focus,
+	.filter input[type="password"]:focus,
+	.k-form input[type="file"]:focus,
+	.filter input[type="file"]:focus,
+	.k-form input[type="email"]:focus,
+	.filter input[type="email"]:focus,
+	.k-form textarea:focus,
+	.filter textarea:focus {
+		box-shadow: inset 0 0 0 2px #00a2b8;
+		background: var(--input-hover-color);
+	}
+
+	select,
+	.filter__select {
+		background: var(--input-color);
+		color: var(--text-color);
+	}
+
+	select:focus,
+	.filter__select:focus {
+		background: var(--input-color);
+
+		box-shadow: inset 0 0 0 2px #00a2b8;
+	}
+
+	span[style="background-color: #FEFF8F"] {
+		background: var(--highlight-color) !important;
+	}
+
+	.CurrentPage {
+		background: none;
+		border: 1px solid #ccc;
+	}
+
+	.container.filter > .row {
+		display: flex;
+		flex-direction: column;
+		margin: 0 1rem;
+		position: fixed;
+	}
+
+	.container.filter {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	.zone > .container {
+		margin: 0 0 0 5em;
+	}
+
+	.col-xxs-24.col-md-12 {
+		width: 100%;
+		padding: 0;
+	}
+
+	.row > .col-md-3 {
+		float: none;
+	}
+
+	.col-xxs-4 {
+		width: calc(50% - 10px);
+	}
+
+	h2.k-headline {
+		margin: 1rem 1rem;
+	}
+
+	.PagerPage {
+		color: var(--text-color);
+	}
+
+	div#p_lt_ZM_P_p_lt_ZC_P_p_lt_ctl00_SearchResults_srchResults_pnlSearchResults {
+		margin-left: 40%;
+	}
+}
