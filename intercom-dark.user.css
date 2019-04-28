@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      seruminar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/intercom-dark.user.css
-@version        1.2.2
+@version        1.2.3
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -136,6 +136,19 @@
 
 	.conversation__link__container .intercom-interblocks-link {
 		border-bottom: 1px solid var(--faded-text-color);
+	}
+
+	.conversation__bubble.o__redacted,
+	.conversation__bubble.o__user-comment.o__redacted {
+		border-color: var(--accent-color);
+		background-color: var(--accent-color);
+		color: var(--text-color);
+	}
+
+	.conversation__bubble.o__admin-comment.o__redacted {
+		border-color: var(--accent-color);
+		background-color: var(--accent-color);
+		color: var(--text-color);
 	}
 
 	.lock__overlay {
@@ -703,7 +716,9 @@
 		fill: var(--highlight-color)!important;
 	}
 
-
+	.intercom-interblocks-link-description {
+		color: var(--text-color);
+	}
 
 	/* Required fix for icon highlight being the same as the background highlight*/
 	a:hover > .interface-icon circle,
@@ -876,6 +891,70 @@
 
 	.messenger-framework__feature-pointer {
 		background-color: var(--submenu-color);
+	}
+
+	.ds-new__modal__container {
+		background-color: var(--submenu-color);
+	}
+
+	.m__composer-help__code {
+		background-color: var(--accent-color);
+	}
+
+	.shortcut {
+		background: var(--accent-color);
+		border: 1px solid var(--accent-color);
+		color: var(--text-color);
+		box-shadow: 0 2px 0 0 var(--accent-color);
+	}
+
+	.twk__responsive-primary-nav .left-nav__bottom {
+		background: var(--menu-color);
+	}
+
+	.profile {
+		background: var(--menu-color);
+	}
+
+	.profile__map-overlay {
+		background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 40%, var(--menu-color));
+	}
+
+	.profile__styled-map-container {
+		background-color: var(--menu-color);
+	}
+
+	/* Required because map does not have transparency and has a white background */
+	.profile__styled-map-container img {
+		filter: invert(1);
+	}
+
+	.profile__static-map-overlay {
+		background: linear-gradient(to right, var(--menu-color) 0, rgba(250, 250, 250, 0) 20%, rgba(250, 250, 250, 0) 80%, var(--menu-color) 100%);
+	}
+
+	.profile__user-data__name {
+		color: var(--text-color)!important;
+	}
+
+	.profile__location {
+		color: var(--text-color);
+	}
+
+	.t__h4 {
+		color: var(--text-color);
+	}
+
+	.inbox__card__header-collapsed {
+		background-color: var(--accent-color);
+	}
+
+	.conversation__card__content-collapsed {
+		background-color: var(--accent-color);
+	}
+
+	.conversation__card__content-expanded {
+		background-color: var(--conversation-background-color);
 	}
 
 	/* scroll bar */
