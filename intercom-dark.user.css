@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      seruminar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/intercom-dark.user.css
-@version        1.2.3
+@version        2.0.0
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -55,7 +55,7 @@
 @var text kentico-saturation "Kentico Saturation" 100
 
 ==/UserStyle== */
-@-moz-document url-prefix("https://app.intercom.io/a/apps/e42kus8l") {
+@-moz-document url-prefix("https://app.intercom.com/a/apps/e42kus8l") {
 
 	body {
 		color: var(--text-color);
@@ -924,6 +924,10 @@
 		background-color: var(--menu-color);
 	}
 
+	.left-nav__bottom {
+		background-color: var(--menu-color);
+	}
+
 	/* Required because map does not have transparency and has a white background */
 	.profile__styled-map-container img {
 		filter: invert(1);
@@ -955,6 +959,68 @@
 
 	.conversation__card__content-expanded {
 		background-color: var(--conversation-background-color);
+	}
+
+	.message__editor__panel__fadable-text {
+		color: var(--text-color);
+	}
+
+	.message__editor__panel {
+		border-bottom: 1px solid var(--faded-text-color);
+	}
+
+	.message__editor__stats__container {
+		background-color: var(--accent-color);
+	}
+
+	.message__editor__stats__tab.o__active {
+		background-color: var(--selected-accent-color);
+		border-color: var(--selected-accent-color) var(--selected-accent-color) transparent;
+		border-top: 2px solid #286efa;
+	}
+
+	.message__editor__stats__tab.o__active .message__editor__stats__tab-label,
+	.message__editor__stats__tab:hover:not(.o__disabled):not(.o__active) .message__editor__stats__tab-label {
+		color: var(--text-color);
+	}
+
+	#embedded_messenger .web-chrome__container {
+		border: 1px solid var(--menu-color);
+		box-shadow: 0 1px 7px 0 var(--menu-color);
+		background-color: var(--menu-color);
+	}
+
+	/* Required because browser images do not have transparency and have a white background */
+	#embedded_messenger img {
+		filter: invert(1);
+	}
+
+	#embedded_messenger .web-chrome__app-body {
+		background-image: none;
+		background-color: var(--menu-color);
+	}
+
+	#embedded_messenger .web-chrome__container.o__chat::after,
+	#embedded_messenger .web-chrome__container.o__note::after {
+		background: linear-gradient(to right, var(--menu-color) 0, var(--menu-color) 25%, rgba(255, 255, 255, .14) 65%, rgba(255, 255, 255, 0) 100%);
+	}
+
+	#embedded_messenger .intercom-chat-avatar .intercom-avatar img {
+		filter: initial;
+	}
+
+	.overlay__standard-tooltip a {
+		color: var(--text-color);
+	}
+
+	.overlay__standard-tooltip {
+		background-color: var(--accent-color);
+		color: var(--text-color);
+	}
+
+	.ds-new__card {
+		background-color: var(--menu-color);
+		border: 1px solid var(--menu-color);
 	}
 
 	/* scroll bar */
@@ -993,6 +1059,10 @@
 	div[data-key="custom_data.paid_customer"] .t__label {
 		background-color: var(--note-accent-color);
 		color: var(--note-accent-text-color);
+	}
+
+	.companyNote {
+		background-color: var(--note-background-color);
 	}
 
 	.trialPlan {
