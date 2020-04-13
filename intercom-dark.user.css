@@ -2,7 +2,7 @@
 @name           Intercom Dark Theme
 @namespace      seruminar/DarkThemes
 @updateURL   	https://raw.githubusercontent.com/seruminar/DarkThemes/master/intercom-dark.user.css
-@version        2.0.0
+@version        2.0.1
 @description    A dark theme for Intercom.
 @author         Yuriy Sountsov
 
@@ -537,6 +537,10 @@
 	.t__solo-link__outer:active .t__solo-link__inner,
 	.t__solo-link__outer:hover .t__solo-link__inner {
 		color: var(--text-color);
+	}
+
+	.nav-vertical__draggable-item {
+		background-color: var(--accent-color);
 	}
 
 	.ds-new__dropdown__block__item {
